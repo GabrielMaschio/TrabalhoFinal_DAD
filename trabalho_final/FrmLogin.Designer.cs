@@ -48,7 +48,7 @@
             this.LblAlert.AutoSize = true;
             this.LblAlert.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LblAlert.ForeColor = System.Drawing.Color.Red;
-            this.LblAlert.Location = new System.Drawing.Point(65, 157);
+            this.LblAlert.Location = new System.Drawing.Point(70, 151);
             this.LblAlert.Name = "LblAlert";
             this.LblAlert.Size = new System.Drawing.Size(170, 16);
             this.LblAlert.TabIndex = 11;
@@ -57,8 +57,9 @@
             // 
             // BtnLogin
             // 
+            this.BtnLogin.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnLogin.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnLogin.Location = new System.Drawing.Point(106, 176);
+            this.BtnLogin.Location = new System.Drawing.Point(114, 170);
             this.BtnLogin.Name = "BtnLogin";
             this.BtnLogin.Size = new System.Drawing.Size(74, 30);
             this.BtnLogin.TabIndex = 10;
@@ -69,7 +70,7 @@
             // TxtSenha
             // 
             this.TxtSenha.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtSenha.Location = new System.Drawing.Point(91, 134);
+            this.TxtSenha.Location = new System.Drawing.Point(96, 128);
             this.TxtSenha.Name = "TxtSenha";
             this.TxtSenha.PasswordChar = '*';
             this.TxtSenha.Size = new System.Drawing.Size(115, 20);
@@ -78,7 +79,7 @@
             // TxtUsuario
             // 
             this.TxtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TxtUsuario.Location = new System.Drawing.Point(91, 82);
+            this.TxtUsuario.Location = new System.Drawing.Point(96, 76);
             this.TxtUsuario.Name = "TxtUsuario";
             this.TxtUsuario.Size = new System.Drawing.Size(115, 20);
             this.TxtUsuario.TabIndex = 8;
@@ -87,7 +88,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(88, 115);
+            this.label2.Location = new System.Drawing.Point(93, 109);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(48, 16);
             this.label2.TabIndex = 7;
@@ -97,7 +98,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(88, 63);
+            this.label1.Location = new System.Drawing.Point(93, 57);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(58, 16);
             this.label1.TabIndex = 6;

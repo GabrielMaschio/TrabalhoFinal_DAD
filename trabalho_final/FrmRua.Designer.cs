@@ -29,39 +29,49 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmRua));
             System.Windows.Forms.Label codruaLabel;
             System.Windows.Forms.Label nomeruaLabel;
             this.sistema_unifunecDataSet = new trabalho_final.sistema_unifunecDataSet();
             this.ruaBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ruaTableAdapter = new trabalho_final.sistema_unifunecDataSetTableAdapters.ruaTableAdapter();
             this.tableAdapterManager = new trabalho_final.sistema_unifunecDataSetTableAdapters.TableAdapterManager();
-            this.ruaBindingNavigator = new System.Windows.Forms.BindingNavigator(this.components);
-            this.bindingNavigatorMoveFirstItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMovePreviousItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorPositionItem = new System.Windows.Forms.ToolStripTextBox();
-            this.bindingNavigatorCountItem = new System.Windows.Forms.ToolStripLabel();
-            this.bindingNavigatorSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorMoveNextItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorMoveLastItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorSeparator2 = new System.Windows.Forms.ToolStripSeparator();
-            this.bindingNavigatorAddNewItem = new System.Windows.Forms.ToolStripButton();
-            this.bindingNavigatorDeleteItem = new System.Windows.Forms.ToolStripButton();
-            this.ruaBindingNavigatorSaveItem = new System.Windows.Forms.ToolStripButton();
             this.ruaDataGridView = new System.Windows.Forms.DataGridView();
-            this.codruaTextBox = new System.Windows.Forms.TextBox();
-            this.nomeruaTextBox = new System.Windows.Forms.TextBox();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TxtCodigo = new System.Windows.Forms.TextBox();
+            this.TxtRua = new System.Windows.Forms.TextBox();
+            this.BtnPrimeiro = new System.Windows.Forms.Button();
+            this.BtnProximo = new System.Windows.Forms.Button();
+            this.BtnAnterior = new System.Windows.Forms.Button();
+            this.BtnUltimo = new System.Windows.Forms.Button();
+            this.BtnNovo = new System.Windows.Forms.Button();
+            this.BtnEditar = new System.Windows.Forms.Button();
+            this.Excluir = new System.Windows.Forms.Button();
+            this.BtnSalvar = new System.Windows.Forms.Button();
             codruaLabel = new System.Windows.Forms.Label();
             nomeruaLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.sistema_unifunecDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ruaBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ruaBindingNavigator)).BeginInit();
-            this.ruaBindingNavigator.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ruaDataGridView)).BeginInit();
             this.SuspendLayout();
+            // 
+            // codruaLabel
+            // 
+            codruaLabel.AutoSize = true;
+            codruaLabel.Location = new System.Drawing.Point(10, 272);
+            codruaLabel.Name = "codruaLabel";
+            codruaLabel.Size = new System.Drawing.Size(43, 13);
+            codruaLabel.TabIndex = 2;
+            codruaLabel.Text = "Código:";
+            // 
+            // nomeruaLabel
+            // 
+            nomeruaLabel.AutoSize = true;
+            nomeruaLabel.Location = new System.Drawing.Point(169, 272);
+            nomeruaLabel.Name = "nomeruaLabel";
+            nomeruaLabel.Size = new System.Drawing.Size(30, 13);
+            nomeruaLabel.TabIndex = 4;
+            nomeruaLabel.Text = "Rua:";
             // 
             // sistema_unifunecDataSet
             // 
@@ -116,130 +126,6 @@
             this.tableAdapterManager.UpdateOrder = trabalho_final.sistema_unifunecDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.vendaprodutoTableAdapter = null;
             // 
-            // ruaBindingNavigator
-            // 
-            this.ruaBindingNavigator.AddNewItem = this.bindingNavigatorAddNewItem;
-            this.ruaBindingNavigator.BindingSource = this.ruaBindingSource;
-            this.ruaBindingNavigator.CountItem = this.bindingNavigatorCountItem;
-            this.ruaBindingNavigator.DeleteItem = this.bindingNavigatorDeleteItem;
-            this.ruaBindingNavigator.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.bindingNavigatorMoveFirstItem,
-            this.bindingNavigatorMovePreviousItem,
-            this.bindingNavigatorSeparator,
-            this.bindingNavigatorPositionItem,
-            this.bindingNavigatorCountItem,
-            this.bindingNavigatorSeparator1,
-            this.bindingNavigatorMoveNextItem,
-            this.bindingNavigatorMoveLastItem,
-            this.bindingNavigatorSeparator2,
-            this.bindingNavigatorAddNewItem,
-            this.bindingNavigatorDeleteItem,
-            this.ruaBindingNavigatorSaveItem});
-            this.ruaBindingNavigator.Location = new System.Drawing.Point(0, 0);
-            this.ruaBindingNavigator.MoveFirstItem = this.bindingNavigatorMoveFirstItem;
-            this.ruaBindingNavigator.MoveLastItem = this.bindingNavigatorMoveLastItem;
-            this.ruaBindingNavigator.MoveNextItem = this.bindingNavigatorMoveNextItem;
-            this.ruaBindingNavigator.MovePreviousItem = this.bindingNavigatorMovePreviousItem;
-            this.ruaBindingNavigator.Name = "ruaBindingNavigator";
-            this.ruaBindingNavigator.PositionItem = this.bindingNavigatorPositionItem;
-            this.ruaBindingNavigator.Size = new System.Drawing.Size(581, 25);
-            this.ruaBindingNavigator.TabIndex = 0;
-            this.ruaBindingNavigator.Text = "bindingNavigator1";
-            // 
-            // bindingNavigatorMoveFirstItem
-            // 
-            this.bindingNavigatorMoveFirstItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveFirstItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveFirstItem.Image")));
-            this.bindingNavigatorMoveFirstItem.Name = "bindingNavigatorMoveFirstItem";
-            this.bindingNavigatorMoveFirstItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveFirstItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMoveFirstItem.Text = "Mover primeiro";
-            // 
-            // bindingNavigatorMovePreviousItem
-            // 
-            this.bindingNavigatorMovePreviousItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMovePreviousItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMovePreviousItem.Image")));
-            this.bindingNavigatorMovePreviousItem.Name = "bindingNavigatorMovePreviousItem";
-            this.bindingNavigatorMovePreviousItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMovePreviousItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorMovePreviousItem.Text = "Mover anterior";
-            // 
-            // bindingNavigatorSeparator
-            // 
-            this.bindingNavigatorSeparator.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator.Size = new System.Drawing.Size(6, 25);
-            // 
-            // bindingNavigatorPositionItem
-            // 
-            this.bindingNavigatorPositionItem.AccessibleName = "Posição";
-            this.bindingNavigatorPositionItem.AutoSize = false;
-            this.bindingNavigatorPositionItem.Name = "bindingNavigatorPositionItem";
-            this.bindingNavigatorPositionItem.Size = new System.Drawing.Size(50, 23);
-            this.bindingNavigatorPositionItem.Text = "0";
-            this.bindingNavigatorPositionItem.ToolTipText = "Posição atual";
-            // 
-            // bindingNavigatorCountItem
-            // 
-            this.bindingNavigatorCountItem.Name = "bindingNavigatorCountItem";
-            this.bindingNavigatorCountItem.Size = new System.Drawing.Size(37, 15);
-            this.bindingNavigatorCountItem.Text = "de {0}";
-            this.bindingNavigatorCountItem.ToolTipText = "Número total de itens";
-            // 
-            // bindingNavigatorSeparator1
-            // 
-            this.bindingNavigatorSeparator1.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator1.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorMoveNextItem
-            // 
-            this.bindingNavigatorMoveNextItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveNextItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveNextItem.Image")));
-            this.bindingNavigatorMoveNextItem.Name = "bindingNavigatorMoveNextItem";
-            this.bindingNavigatorMoveNextItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveNextItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorMoveNextItem.Text = "Mover próximo";
-            // 
-            // bindingNavigatorMoveLastItem
-            // 
-            this.bindingNavigatorMoveLastItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorMoveLastItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorMoveLastItem.Image")));
-            this.bindingNavigatorMoveLastItem.Name = "bindingNavigatorMoveLastItem";
-            this.bindingNavigatorMoveLastItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorMoveLastItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorMoveLastItem.Text = "Mover último";
-            // 
-            // bindingNavigatorSeparator2
-            // 
-            this.bindingNavigatorSeparator2.Name = "bindingNavigatorSeparator";
-            this.bindingNavigatorSeparator2.Size = new System.Drawing.Size(6, 6);
-            // 
-            // bindingNavigatorAddNewItem
-            // 
-            this.bindingNavigatorAddNewItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorAddNewItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorAddNewItem.Image")));
-            this.bindingNavigatorAddNewItem.Name = "bindingNavigatorAddNewItem";
-            this.bindingNavigatorAddNewItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorAddNewItem.Size = new System.Drawing.Size(23, 22);
-            this.bindingNavigatorAddNewItem.Text = "Adicionar novo";
-            // 
-            // bindingNavigatorDeleteItem
-            // 
-            this.bindingNavigatorDeleteItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.bindingNavigatorDeleteItem.Image = ((System.Drawing.Image)(resources.GetObject("bindingNavigatorDeleteItem.Image")));
-            this.bindingNavigatorDeleteItem.Name = "bindingNavigatorDeleteItem";
-            this.bindingNavigatorDeleteItem.RightToLeftAutoMirrorImage = true;
-            this.bindingNavigatorDeleteItem.Size = new System.Drawing.Size(23, 20);
-            this.bindingNavigatorDeleteItem.Text = "Excluir";
-            // 
-            // ruaBindingNavigatorSaveItem
-            // 
-            this.ruaBindingNavigatorSaveItem.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.ruaBindingNavigatorSaveItem.Image = ((System.Drawing.Image)(resources.GetObject("ruaBindingNavigatorSaveItem.Image")));
-            this.ruaBindingNavigatorSaveItem.Name = "ruaBindingNavigatorSaveItem";
-            this.ruaBindingNavigatorSaveItem.Size = new System.Drawing.Size(23, 23);
-            this.ruaBindingNavigatorSaveItem.Text = "Salvar Dados";
-            this.ruaBindingNavigatorSaveItem.Click += new System.EventHandler(this.ruaBindingNavigatorSaveItem_Click);
-            // 
             // ruaDataGridView
             // 
             this.ruaDataGridView.AutoGenerateColumns = false;
@@ -249,44 +135,10 @@
             this.dataGridViewTextBoxColumn2});
             this.ruaDataGridView.DataSource = this.ruaBindingSource;
             this.ruaDataGridView.Enabled = false;
-            this.ruaDataGridView.Location = new System.Drawing.Point(82, 45);
+            this.ruaDataGridView.Location = new System.Drawing.Point(12, 12);
             this.ruaDataGridView.Name = "ruaDataGridView";
-            this.ruaDataGridView.Size = new System.Drawing.Size(243, 220);
+            this.ruaDataGridView.Size = new System.Drawing.Size(260, 220);
             this.ruaDataGridView.TabIndex = 1;
-            // 
-            // codruaLabel
-            // 
-            codruaLabel.AutoSize = true;
-            codruaLabel.Location = new System.Drawing.Point(348, 45);
-            codruaLabel.Name = "codruaLabel";
-            codruaLabel.Size = new System.Drawing.Size(43, 13);
-            codruaLabel.TabIndex = 2;
-            codruaLabel.Text = "Código:";
-            // 
-            // codruaTextBox
-            // 
-            this.codruaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ruaBindingSource, "codrua", true));
-            this.codruaTextBox.Location = new System.Drawing.Point(351, 61);
-            this.codruaTextBox.Name = "codruaTextBox";
-            this.codruaTextBox.Size = new System.Drawing.Size(100, 20);
-            this.codruaTextBox.TabIndex = 3;
-            // 
-            // nomeruaLabel
-            // 
-            nomeruaLabel.AutoSize = true;
-            nomeruaLabel.Location = new System.Drawing.Point(348, 96);
-            nomeruaLabel.Name = "nomeruaLabel";
-            nomeruaLabel.Size = new System.Drawing.Size(30, 13);
-            nomeruaLabel.TabIndex = 4;
-            nomeruaLabel.Text = "Rua:";
-            // 
-            // nomeruaTextBox
-            // 
-            this.nomeruaTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ruaBindingSource, "nomerua", true));
-            this.nomeruaTextBox.Location = new System.Drawing.Point(351, 112);
-            this.nomeruaTextBox.Name = "nomeruaTextBox";
-            this.nomeruaTextBox.Size = new System.Drawing.Size(100, 20);
-            this.nomeruaTextBox.TabIndex = 5;
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -301,25 +153,148 @@
             this.dataGridViewTextBoxColumn2.HeaderText = "Rua";
             this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
             // 
+            // TxtCodigo
+            // 
+            this.TxtCodigo.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ruaBindingSource, "codrua", true));
+            this.TxtCodigo.Enabled = false;
+            this.TxtCodigo.Location = new System.Drawing.Point(13, 288);
+            this.TxtCodigo.Name = "TxtCodigo";
+            this.TxtCodigo.Size = new System.Drawing.Size(100, 20);
+            this.TxtCodigo.TabIndex = 3;
+            // 
+            // TxtRua
+            // 
+            this.TxtRua.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.ruaBindingSource, "nomerua", true));
+            this.TxtRua.Enabled = false;
+            this.TxtRua.Location = new System.Drawing.Point(172, 288);
+            this.TxtRua.Name = "TxtRua";
+            this.TxtRua.Size = new System.Drawing.Size(100, 20);
+            this.TxtRua.TabIndex = 5;
+            // 
+            // BtnPrimeiro
+            // 
+            this.BtnPrimeiro.Font = new System.Drawing.Font("Arial Narrow", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnPrimeiro.Location = new System.Drawing.Point(13, 239);
+            this.BtnPrimeiro.Name = "BtnPrimeiro";
+            this.BtnPrimeiro.Size = new System.Drawing.Size(46, 23);
+            this.BtnPrimeiro.TabIndex = 6;
+            this.BtnPrimeiro.Text = "|<";
+            this.BtnPrimeiro.UseVisualStyleBackColor = true;
+            this.BtnPrimeiro.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // BtnProximo
+            // 
+            this.BtnProximo.Font = new System.Drawing.Font("Arial Narrow", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnProximo.Location = new System.Drawing.Point(174, 238);
+            this.BtnProximo.Name = "BtnProximo";
+            this.BtnProximo.Size = new System.Drawing.Size(46, 23);
+            this.BtnProximo.TabIndex = 7;
+            this.BtnProximo.Text = ">>";
+            this.BtnProximo.UseVisualStyleBackColor = true;
+            this.BtnProximo.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // BtnAnterior
+            // 
+            this.BtnAnterior.Font = new System.Drawing.Font("Arial Narrow", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAnterior.Location = new System.Drawing.Point(65, 239);
+            this.BtnAnterior.Name = "BtnAnterior";
+            this.BtnAnterior.Size = new System.Drawing.Size(46, 23);
+            this.BtnAnterior.TabIndex = 8;
+            this.BtnAnterior.Text = "<<";
+            this.BtnAnterior.UseVisualStyleBackColor = true;
+            this.BtnAnterior.Click += new System.EventHandler(this.button3_Click);
+            // 
+            // BtnUltimo
+            // 
+            this.BtnUltimo.Font = new System.Drawing.Font("Arial Narrow", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnUltimo.Location = new System.Drawing.Point(226, 239);
+            this.BtnUltimo.Name = "BtnUltimo";
+            this.BtnUltimo.Size = new System.Drawing.Size(46, 23);
+            this.BtnUltimo.TabIndex = 9;
+            this.BtnUltimo.Text = ">|";
+            this.BtnUltimo.UseVisualStyleBackColor = true;
+            this.BtnUltimo.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // BtnNovo
+            // 
+            this.BtnNovo.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnNovo.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.BtnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnNovo.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnNovo.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BtnNovo.Location = new System.Drawing.Point(13, 323);
+            this.BtnNovo.Name = "BtnNovo";
+            this.BtnNovo.Size = new System.Drawing.Size(58, 23);
+            this.BtnNovo.TabIndex = 10;
+            this.BtnNovo.Text = "Novo";
+            this.BtnNovo.UseVisualStyleBackColor = false;
+            this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
+            // 
+            // BtnEditar
+            // 
+            this.BtnEditar.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnEditar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEditar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BtnEditar.Location = new System.Drawing.Point(77, 323);
+            this.BtnEditar.Name = "BtnEditar";
+            this.BtnEditar.Size = new System.Drawing.Size(58, 23);
+            this.BtnEditar.TabIndex = 11;
+            this.BtnEditar.Text = "Editar";
+            this.BtnEditar.UseVisualStyleBackColor = false;
+            this.BtnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
+            // 
+            // Excluir
+            // 
+            this.Excluir.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.Excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Excluir.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Excluir.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.Excluir.Location = new System.Drawing.Point(141, 323);
+            this.Excluir.Name = "Excluir";
+            this.Excluir.Size = new System.Drawing.Size(62, 23);
+            this.Excluir.TabIndex = 12;
+            this.Excluir.Text = "Excluir";
+            this.Excluir.UseVisualStyleBackColor = false;
+            // 
+            // BtnSalvar
+            // 
+            this.BtnSalvar.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BtnSalvar.Enabled = false;
+            this.BtnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.BtnSalvar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSalvar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.BtnSalvar.Location = new System.Drawing.Point(209, 323);
+            this.BtnSalvar.Name = "BtnSalvar";
+            this.BtnSalvar.Size = new System.Drawing.Size(63, 23);
+            this.BtnSalvar.TabIndex = 13;
+            this.BtnSalvar.Text = "Salvar";
+            this.BtnSalvar.UseVisualStyleBackColor = false;
+            this.BtnSalvar.Click += new System.EventHandler(this.BtnSalvar_Click);
+            // 
             // FrmRua
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(581, 337);
+            this.ClientSize = new System.Drawing.Size(284, 363);
+            this.Controls.Add(this.BtnSalvar);
+            this.Controls.Add(this.Excluir);
+            this.Controls.Add(this.BtnEditar);
+            this.Controls.Add(this.BtnNovo);
+            this.Controls.Add(this.BtnUltimo);
+            this.Controls.Add(this.BtnAnterior);
+            this.Controls.Add(this.BtnProximo);
+            this.Controls.Add(this.BtnPrimeiro);
             this.Controls.Add(codruaLabel);
-            this.Controls.Add(this.codruaTextBox);
+            this.Controls.Add(this.TxtCodigo);
             this.Controls.Add(nomeruaLabel);
-            this.Controls.Add(this.nomeruaTextBox);
+            this.Controls.Add(this.TxtRua);
             this.Controls.Add(this.ruaDataGridView);
-            this.Controls.Add(this.ruaBindingNavigator);
             this.Name = "FrmRua";
             this.Text = "Cadastro Rua";
             this.Load += new System.EventHandler(this.FrmRua_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sistema_unifunecDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ruaBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ruaBindingNavigator)).EndInit();
-            this.ruaBindingNavigator.ResumeLayout(false);
-            this.ruaBindingNavigator.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ruaDataGridView)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -332,23 +307,18 @@
         private System.Windows.Forms.BindingSource ruaBindingSource;
         private sistema_unifunecDataSetTableAdapters.ruaTableAdapter ruaTableAdapter;
         private sistema_unifunecDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.BindingNavigator ruaBindingNavigator;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorAddNewItem;
-        private System.Windows.Forms.ToolStripLabel bindingNavigatorCountItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorDeleteItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveFirstItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMovePreviousItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator;
-        private System.Windows.Forms.ToolStripTextBox bindingNavigatorPositionItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator1;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveNextItem;
-        private System.Windows.Forms.ToolStripButton bindingNavigatorMoveLastItem;
-        private System.Windows.Forms.ToolStripSeparator bindingNavigatorSeparator2;
-        private System.Windows.Forms.ToolStripButton ruaBindingNavigatorSaveItem;
         private System.Windows.Forms.DataGridView ruaDataGridView;
-        private System.Windows.Forms.TextBox codruaTextBox;
-        private System.Windows.Forms.TextBox nomeruaTextBox;
+        private System.Windows.Forms.TextBox TxtCodigo;
+        private System.Windows.Forms.TextBox TxtRua;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.Button BtnPrimeiro;
+        private System.Windows.Forms.Button BtnProximo;
+        private System.Windows.Forms.Button BtnAnterior;
+        private System.Windows.Forms.Button BtnUltimo;
+        private System.Windows.Forms.Button BtnNovo;
+        private System.Windows.Forms.Button BtnEditar;
+        private System.Windows.Forms.Button Excluir;
+        private System.Windows.Forms.Button BtnSalvar;
     }
 }

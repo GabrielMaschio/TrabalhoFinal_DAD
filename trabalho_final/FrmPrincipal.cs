@@ -58,7 +58,8 @@ namespace trabalho_final
                                 MnuVenda.Visible = true;
                                 MnuFinanceiro.Visible = true;
                                 MnuLoja.Visible = true;
-                                MnuLogin.Visible = true;
+                                MnuCadastroLogin.Visible = true;
+                                MnuCadastroAcesso.Visible = true;
                                 break;
                             case 2:
                                 MnuFornecedor.Visible = true;

@@ -31,5 +31,46 @@ namespace trabalho_final
             this.ruaTableAdapter.Fill(this.sistema_unifunecDataSet.rua);
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ruaBindingSource.MoveFirst();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            ruaBindingSource.MovePrevious();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ruaBindingSource.MoveNext();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ruaBindingSource.MoveLast();
+        }
+
+        private void BtnNovo_Click(object sender, EventArgs e)
+        {
+            TxtRua.Enabled = true;
+            BtnSalvar.Enabled = true;
+            ruaBindingSource.AddNew();
+        }
+
+        private void BtnSalvar_Click(object sender, EventArgs e)
+        {
+            TxtRua.Enabled = false;
+            BtnSalvar.Enabled = false;
+            ruaBindingSource.EndEdit();
+            ruaTableAdapter.Update(sistema_unifunecDataSet);
+        }
+
+        private void BtnEditar_Click(object sender, EventArgs e)
+        {
+            TxtRua.Enabled = true;
+            BtnSalvar.Enabled = true;
+        }
     }
 }
