@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmBairro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBairro.Designer.cs">
+      <DependentUpon>FrmBairro.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +80,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>sistema_unifunecDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmBairro.resx">
+      <DependentUpon>FrmBairro.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>

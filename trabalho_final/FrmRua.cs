@@ -72,5 +72,12 @@ namespace trabalho_final
             TxtRua.Enabled = true;
             BtnSalvar.Enabled = true;
         }
+
+        private void Excluir_Click(object sender, EventArgs e)
+        {
+            ruaBindingSource.RemoveCurrent();
+            ruaBindingSource.EndEdit();
+            ruaTableAdapter.Update(sistema_unifunecDataSet);
+        }
     }
 }

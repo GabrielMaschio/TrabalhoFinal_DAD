@@ -256,6 +256,7 @@
             this.Excluir.TabIndex = 12;
             this.Excluir.Text = "Excluir";
             this.Excluir.UseVisualStyleBackColor = false;
+            this.Excluir.Click += new System.EventHandler(this.Excluir_Click);
             // 
             // BtnSalvar
             // 
@@ -291,6 +292,7 @@
             this.Controls.Add(this.TxtRua);
             this.Controls.Add(this.ruaDataGridView);
             this.Name = "FrmRua";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Rua";
             this.Load += new System.EventHandler(this.FrmRua_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sistema_unifunecDataSet)).EndInit();

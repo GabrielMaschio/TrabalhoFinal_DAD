@@ -127,5 +127,11 @@ namespace trabalho_final
         {
             Application.Run(new FrmLogin());
         }
+
+        private void bairroToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmBairro frmBairro = new FrmBairro();
+            frmBairro.ShowDialog();
+        }
     }
 }
