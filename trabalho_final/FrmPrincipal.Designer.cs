@@ -96,22 +96,23 @@
             // ruaToolStripMenuItem
             // 
             this.ruaToolStripMenuItem.Name = "ruaToolStripMenuItem";
-            this.ruaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.ruaToolStripMenuItem.Text = "Rua";
+            this.ruaToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.ruaToolStripMenuItem.Text = "Cadastro Rua";
             this.ruaToolStripMenuItem.Click += new System.EventHandler(this.ruaToolStripMenuItem_Click);
             // 
             // bairroToolStripMenuItem
             // 
             this.bairroToolStripMenuItem.Name = "bairroToolStripMenuItem";
-            this.bairroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.bairroToolStripMenuItem.Text = "Bairro";
+            this.bairroToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.bairroToolStripMenuItem.Text = "Cadastro Bairro";
             this.bairroToolStripMenuItem.Click += new System.EventHandler(this.bairroToolStripMenuItem_Click);
             // 
             // cepToolStripMenuItem
             // 
             this.cepToolStripMenuItem.Name = "cepToolStripMenuItem";
-            this.cepToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.cepToolStripMenuItem.Text = "CEP";
+            this.cepToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.cepToolStripMenuItem.Text = "Cadastro CEP";
+            this.cepToolStripMenuItem.Click += new System.EventHandler(this.cepToolStripMenuItem_Click);
             // 
             // MnuTelefone
             // 
@@ -325,6 +326,7 @@
             this.Name = "FrmPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Tela Principal";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

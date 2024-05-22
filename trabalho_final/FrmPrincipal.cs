@@ -133,5 +133,11 @@ namespace trabalho_final
             FrmBairro frmBairro = new FrmBairro();
             frmBairro.ShowDialog();
         }
+
+        private void cepToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCEP frmCEP = new FrmCEP();
+            frmCEP.ShowDialog();
+        }
     }
 }
