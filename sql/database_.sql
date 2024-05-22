@@ -1,6 +1,5 @@
 -- Criar banco de dados
 CREATE DATABASE sistema_unifunec;
-DROP DATABASE sistema_unifunec;
 
 -- SEXO = {@CODSEXO, NOMESEXO}
 CREATE TABLE sexo ( -- comando para criar tabela
@@ -5988,3 +5987,12 @@ INSERT INTO itensacessologin(codacesso_fk, codlogin_fk) VALUES(11, 2);
 
 -- CONTROLELOGSISTEMA = {@CODCONTROLE, #CODLOGIN_fk, DATALOGIN, HORA}
 -- INSERT INTO CONTROLELOGSISTEMA(codlogin_fk, datalogin, hora) VALUES(1, '18-09-2023', '01:08:46');
+
+-- VIEW 
+
+CREATE VIEW vw_telefone AS
+SELECT codtelefone, numero, nomeoperadora
+FROM telefone, operadora
+WHERE codoperadora = codoperadora_fk;
+
+SELECT * FROM operadora;
