@@ -39,6 +39,7 @@
             this.logarBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.logarTableAdapter = new trabalho_final.sistema_unifunecDataSetTableAdapters.logarTableAdapter();
             this.tableAdapterManager = new trabalho_final.sistema_unifunecDataSetTableAdapters.TableAdapterManager();
+            this.controlelogsistemaTableAdapter1 = new trabalho_final.sistema_unifunecDataSetTableAdapters.controlelogsistemaTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.sistema_unifunecDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.logarBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -157,6 +158,10 @@
             this.tableAdapterManager.UpdateOrder = trabalho_final.sistema_unifunecDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.vendaprodutoTableAdapter = null;
             // 
+            // controlelogsistemaTableAdapter1
+            // 
+            this.controlelogsistemaTableAdapter1.ClearBeforeFill = true;
+            // 
             // FrmLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -190,6 +195,7 @@
         private System.Windows.Forms.BindingSource logarBindingSource;
         private sistema_unifunecDataSetTableAdapters.logarTableAdapter logarTableAdapter;
         private sistema_unifunecDataSetTableAdapters.TableAdapterManager tableAdapterManager;
+        private sistema_unifunecDataSetTableAdapters.controlelogsistemaTableAdapter controlelogsistemaTableAdapter1;
     }
 }
 

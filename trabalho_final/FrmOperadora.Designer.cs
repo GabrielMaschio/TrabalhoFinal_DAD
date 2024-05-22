@@ -55,6 +55,24 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
+            // codoperadoraLabel
+            // 
+            codoperadoraLabel.AutoSize = true;
+            codoperadoraLabel.Location = new System.Drawing.Point(33, 279);
+            codoperadoraLabel.Name = "codoperadoraLabel";
+            codoperadoraLabel.Size = new System.Drawing.Size(43, 13);
+            codoperadoraLabel.TabIndex = 1;
+            codoperadoraLabel.Text = "Código:";
+            // 
+            // nomeoperadoraLabel
+            // 
+            nomeoperadoraLabel.AutoSize = true;
+            nomeoperadoraLabel.Location = new System.Drawing.Point(199, 279);
+            nomeoperadoraLabel.Name = "nomeoperadoraLabel";
+            nomeoperadoraLabel.Size = new System.Drawing.Size(60, 13);
+            nomeoperadoraLabel.TabIndex = 3;
+            nomeoperadoraLabel.Text = "Operadora:";
+            // 
             // sistema_unifunecDataSet
             // 
             this.sistema_unifunecDataSet.DataSetName = "sistema_unifunecDataSet";
@@ -108,15 +126,6 @@
             this.tableAdapterManager.UpdateOrder = trabalho_final.sistema_unifunecDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.vendaprodutoTableAdapter = null;
             // 
-            // codoperadoraLabel
-            // 
-            codoperadoraLabel.AutoSize = true;
-            codoperadoraLabel.Location = new System.Drawing.Point(33, 279);
-            codoperadoraLabel.Name = "codoperadoraLabel";
-            codoperadoraLabel.Size = new System.Drawing.Size(43, 13);
-            codoperadoraLabel.TabIndex = 1;
-            codoperadoraLabel.Text = "Código:";
-            // 
             // codoperadoraTextBox
             // 
             this.codoperadoraTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.operadoraBindingSource, "codoperadora", true));
@@ -125,15 +134,6 @@
             this.codoperadoraTextBox.Name = "codoperadoraTextBox";
             this.codoperadoraTextBox.Size = new System.Drawing.Size(100, 20);
             this.codoperadoraTextBox.TabIndex = 2;
-            // 
-            // nomeoperadoraLabel
-            // 
-            nomeoperadoraLabel.AutoSize = true;
-            nomeoperadoraLabel.Location = new System.Drawing.Point(199, 279);
-            nomeoperadoraLabel.Name = "nomeoperadoraLabel";
-            nomeoperadoraLabel.Size = new System.Drawing.Size(60, 13);
-            nomeoperadoraLabel.TabIndex = 3;
-            nomeoperadoraLabel.Text = "Operadora:";
             // 
             // TxtOperadora
             // 
@@ -254,6 +254,7 @@
             this.codoperadoraDataGridViewTextBoxColumn,
             this.nomeoperadoraDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.operadoraBindingSource;
+            this.dataGridView1.Enabled = false;
             this.dataGridView1.Location = new System.Drawing.Point(36, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(266, 227);
@@ -291,6 +292,7 @@
             this.Controls.Add(nomeoperadoraLabel);
             this.Controls.Add(this.TxtOperadora);
             this.Name = "FrmOperadora";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = " Cadastro Operadora";
             this.Load += new System.EventHandler(this.FrmOperadora_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sistema_unifunecDataSet)).EndInit();

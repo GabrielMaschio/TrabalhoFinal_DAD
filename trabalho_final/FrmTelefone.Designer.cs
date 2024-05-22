@@ -50,11 +50,11 @@
             this.BtnProximo = new System.Windows.Forms.Button();
             this.BtnPrimeiro = new System.Windows.Forms.Button();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.vwtelefoneBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.vw_telefoneTableAdapter = new trabalho_final.sistema_unifunecDataSetTableAdapters.vw_telefoneTableAdapter();
             this.codtelefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.numeroDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nomeoperadoraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.vwtelefoneBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.vw_telefoneTableAdapter = new trabalho_final.sistema_unifunecDataSetTableAdapters.vw_telefoneTableAdapter();
             codtelefoneLabel = new System.Windows.Forms.Label();
             numeroLabel = new System.Windows.Forms.Label();
             label1 = new System.Windows.Forms.Label();
@@ -297,19 +297,11 @@
             this.numeroDataGridViewTextBoxColumn,
             this.nomeoperadoraDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.vwtelefoneBindingSource;
+            this.dataGridView1.Enabled = false;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.Size = new System.Drawing.Size(344, 232);
             this.dataGridView1.TabIndex = 26;
-            // 
-            // vwtelefoneBindingSource
-            // 
-            this.vwtelefoneBindingSource.DataMember = "vw_telefone";
-            this.vwtelefoneBindingSource.DataSource = this.sistema_unifunecDataSet;
-            // 
-            // vw_telefoneTableAdapter
-            // 
-            this.vw_telefoneTableAdapter.ClearBeforeFill = true;
             // 
             // codtelefoneDataGridViewTextBoxColumn
             // 
@@ -328,6 +320,15 @@
             this.nomeoperadoraDataGridViewTextBoxColumn.DataPropertyName = "nomeoperadora";
             this.nomeoperadoraDataGridViewTextBoxColumn.HeaderText = "Operadora";
             this.nomeoperadoraDataGridViewTextBoxColumn.Name = "nomeoperadoraDataGridViewTextBoxColumn";
+            // 
+            // vwtelefoneBindingSource
+            // 
+            this.vwtelefoneBindingSource.DataMember = "vw_telefone";
+            this.vwtelefoneBindingSource.DataSource = this.sistema_unifunecDataSet;
+            // 
+            // vw_telefoneTableAdapter
+            // 
+            this.vw_telefoneTableAdapter.ClearBeforeFill = true;
             // 
             // FrmTelefone
             // 
@@ -350,6 +351,7 @@
             this.Controls.Add(this.codtelefoneTextBox);
             this.Controls.Add(numeroLabel);
             this.Name = "FrmTelefone";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro Telefone";
             this.Load += new System.EventHandler(this.FrmTelefone_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sistema_unifunecDataSet)).EndInit();

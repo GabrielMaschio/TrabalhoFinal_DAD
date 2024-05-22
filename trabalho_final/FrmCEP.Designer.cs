@@ -292,6 +292,7 @@
             this.Controls.Add(this.BtnPrimeiro);
             this.Controls.Add(this.cepDataGridView);
             this.Name = "FrmCEP";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Cadastro CEP";
             this.Load += new System.EventHandler(this.FrmCEP_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sistema_unifunecDataSet)).EndInit();

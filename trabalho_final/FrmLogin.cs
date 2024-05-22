@@ -31,6 +31,16 @@ namespace trabalho_final
 
             if (dtLogins.Rows.Count > 0)
             {
+                DataTableReader dtr = dtLogins.CreateDataReader();
+                dtr.Read();
+                int codigoLogin = int.Parse(dtr["codlogin"].ToString());
+
+                DateTime currentDateTime = DateTime.Now;
+                string datePart = currentDateTime.ToString("yyyy-MM-dd");
+                string timePart = currentDateTime.ToString("HH:mm:ss");
+
+                controlelogsistemaTableAdapter1.InsertDadosLogin(codigoLogin, datePart, timePart);
+
                 this.Close();
                 tLogin = new Thread(openWindow);
                 tLogin.SetApartmentState(ApartmentState.STA);
