@@ -145,5 +145,11 @@ namespace trabalho_final
             FrmOperadora frmOperadora = new FrmOperadora();
             frmOperadora.ShowDialog();
         }
+
+        private void cadastroTelefoneToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTelefone frmTelefone = new FrmTelefone();
+            frmTelefone.ShowDialog();
+        }
     }
 }

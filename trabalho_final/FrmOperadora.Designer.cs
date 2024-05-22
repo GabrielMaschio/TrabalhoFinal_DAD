@@ -291,7 +291,7 @@
             this.Controls.Add(nomeoperadoraLabel);
             this.Controls.Add(this.TxtOperadora);
             this.Name = "FrmOperadora";
-            this.Text = " ";
+            this.Text = " Cadastro Operadora";
             this.Load += new System.EventHandler(this.FrmOperadora_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sistema_unifunecDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.operadoraBindingSource)).EndInit();

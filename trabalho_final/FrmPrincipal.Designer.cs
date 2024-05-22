@@ -50,16 +50,16 @@
             this.MnuLogin = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuCadastroLogin = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuCadastroAcesso = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.LblUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sistema_unifunecDataSet = new trabalho_final.sistema_unifunecDataSet();
             this.logarTableAdapter = new trabalho_final.sistema_unifunecDataSetTableAdapters.logarTableAdapter();
             this.tableAdapterManager = new trabalho_final.sistema_unifunecDataSetTableAdapters.TableAdapterManager();
             this.itensacessologinTableAdapter = new trabalho_final.sistema_unifunecDataSetTableAdapters.itensacessologinTableAdapter();
-            this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.LblUsuario = new System.Windows.Forms.ToolStripStatusLabel();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sistema_unifunecDataSet)).BeginInit();
             this.statusStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sistema_unifunecDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -96,21 +96,21 @@
             // ruaToolStripMenuItem
             // 
             this.ruaToolStripMenuItem.Name = "ruaToolStripMenuItem";
-            this.ruaToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.ruaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ruaToolStripMenuItem.Text = "Cadastro Rua";
             this.ruaToolStripMenuItem.Click += new System.EventHandler(this.ruaToolStripMenuItem_Click);
             // 
             // bairroToolStripMenuItem
             // 
             this.bairroToolStripMenuItem.Name = "bairroToolStripMenuItem";
-            this.bairroToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.bairroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.bairroToolStripMenuItem.Text = "Cadastro Bairro";
             this.bairroToolStripMenuItem.Click += new System.EventHandler(this.bairroToolStripMenuItem_Click);
             // 
             // cepToolStripMenuItem
             // 
             this.cepToolStripMenuItem.Name = "cepToolStripMenuItem";
-            this.cepToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
+            this.cepToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cepToolStripMenuItem.Text = "Cadastro CEP";
             this.cepToolStripMenuItem.Click += new System.EventHandler(this.cepToolStripMenuItem_Click);
             // 
@@ -136,6 +136,7 @@
             this.cadastroTelefoneToolStripMenuItem.Name = "cadastroTelefoneToolStripMenuItem";
             this.cadastroTelefoneToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cadastroTelefoneToolStripMenuItem.Text = "Cadastro Telefone";
+            this.cadastroTelefoneToolStripMenuItem.Click += new System.EventHandler(this.cadastroTelefoneToolStripMenuItem_Click);
             // 
             // MnuCliente
             // 
@@ -240,6 +241,23 @@
             this.MnuCadastroAcesso.Text = "Cadastrar Acesso";
             this.MnuCadastroAcesso.Visible = false;
             // 
+            // statusStrip1
+            // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.LblUsuario});
+            this.statusStrip1.Location = new System.Drawing.Point(0, 478);
+            this.statusStrip1.Name = "statusStrip1";
+            this.statusStrip1.Size = new System.Drawing.Size(806, 22);
+            this.statusStrip1.TabIndex = 7;
+            this.statusStrip1.Text = "statusStrip1";
+            // 
+            // LblUsuario
+            // 
+            this.LblUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblUsuario.Name = "LblUsuario";
+            this.LblUsuario.Size = new System.Drawing.Size(57, 17);
+            this.LblUsuario.Text = "Usuário:";
+            // 
             // logOutToolStripMenuItem
             // 
             this.logOutToolStripMenuItem.Image = global::trabalho_final.Properties.Resources.exit_to_app;
@@ -300,23 +318,6 @@
             // 
             this.itensacessologinTableAdapter.ClearBeforeFill = true;
             // 
-            // statusStrip1
-            // 
-            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.LblUsuario});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 478);
-            this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(806, 22);
-            this.statusStrip1.TabIndex = 7;
-            this.statusStrip1.Text = "statusStrip1";
-            // 
-            // LblUsuario
-            // 
-            this.LblUsuario.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblUsuario.Name = "LblUsuario";
-            this.LblUsuario.Size = new System.Drawing.Size(57, 17);
-            this.LblUsuario.Text = "Usuário:";
-            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -331,9 +332,9 @@
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sistema_unifunecDataSet)).EndInit();
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sistema_unifunecDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
