@@ -129,6 +129,7 @@
             this.cadastroOperadoraToolStripMenuItem.Name = "cadastroOperadoraToolStripMenuItem";
             this.cadastroOperadoraToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.cadastroOperadoraToolStripMenuItem.Text = "Cadastro Operadora";
+            this.cadastroOperadoraToolStripMenuItem.Click += new System.EventHandler(this.cadastroOperadoraToolStripMenuItem_Click);
             // 
             // cadastroTelefoneToolStripMenuItem
             // 

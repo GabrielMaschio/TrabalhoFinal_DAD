@@ -1,6 +1,6 @@
 ﻿namespace trabalho_final
 {
-    partial class FrmCEP
+    partial class FrmOperadora
     {
         /// <summary>
         /// Required designer variable.
@@ -29,15 +29,14 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.Label codcepLabel;
-            System.Windows.Forms.Label numerocepLabel;
+            System.Windows.Forms.Label codoperadoraLabel;
+            System.Windows.Forms.Label nomeoperadoraLabel;
             this.sistema_unifunecDataSet = new trabalho_final.sistema_unifunecDataSet();
-            this.cepBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cepTableAdapter = new trabalho_final.sistema_unifunecDataSetTableAdapters.cepTableAdapter();
+            this.operadoraBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.operadoraTableAdapter = new trabalho_final.sistema_unifunecDataSetTableAdapters.operadoraTableAdapter();
             this.tableAdapterManager = new trabalho_final.sistema_unifunecDataSetTableAdapters.TableAdapterManager();
-            this.cepDataGridView = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.codoperadoraTextBox = new System.Windows.Forms.TextBox();
+            this.TxtOperadora = new System.Windows.Forms.TextBox();
             this.BtnUltimo = new System.Windows.Forms.Button();
             this.BtnAnterior = new System.Windows.Forms.Button();
             this.BtnProximo = new System.Windows.Forms.Button();
@@ -46,53 +45,36 @@
             this.Excluir = new System.Windows.Forms.Button();
             this.BtnEditar = new System.Windows.Forms.Button();
             this.BtnNovo = new System.Windows.Forms.Button();
-            this.codcepTextBox = new System.Windows.Forms.TextBox();
-            this.TxtBairro = new System.Windows.Forms.TextBox();
-            codcepLabel = new System.Windows.Forms.Label();
-            numerocepLabel = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.codoperadoraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nomeoperadoraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            codoperadoraLabel = new System.Windows.Forms.Label();
+            nomeoperadoraLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.sistema_unifunecDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cepBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cepDataGridView)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.operadoraBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
-            // 
-            // codcepLabel
-            // 
-            codcepLabel.AutoSize = true;
-            codcepLabel.Location = new System.Drawing.Point(9, 275);
-            codcepLabel.Name = "codcepLabel";
-            codcepLabel.Size = new System.Drawing.Size(43, 13);
-            codcepLabel.TabIndex = 21;
-            codcepLabel.Text = "Código:";
-            // 
-            // numerocepLabel
-            // 
-            numerocepLabel.AutoSize = true;
-            numerocepLabel.Location = new System.Drawing.Point(175, 277);
-            numerocepLabel.Name = "numerocepLabel";
-            numerocepLabel.Size = new System.Drawing.Size(31, 13);
-            numerocepLabel.TabIndex = 23;
-            numerocepLabel.Text = "CEP:";
             // 
             // sistema_unifunecDataSet
             // 
             this.sistema_unifunecDataSet.DataSetName = "sistema_unifunecDataSet";
             this.sistema_unifunecDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // cepBindingSource
+            // operadoraBindingSource
             // 
-            this.cepBindingSource.DataMember = "cep";
-            this.cepBindingSource.DataSource = this.sistema_unifunecDataSet;
+            this.operadoraBindingSource.DataMember = "operadora";
+            this.operadoraBindingSource.DataSource = this.sistema_unifunecDataSet;
             // 
-            // cepTableAdapter
+            // operadoraTableAdapter
             // 
-            this.cepTableAdapter.ClearBeforeFill = true;
+            this.operadoraTableAdapter.ClearBeforeFill = true;
             // 
             // tableAdapterManager
             // 
             this.tableAdapterManager.acessoTableAdapter = null;
             this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
             this.tableAdapterManager.bairroTableAdapter = null;
-            this.tableAdapterManager.cepTableAdapter = this.cepTableAdapter;
+            this.tableAdapterManager.cepTableAdapter = null;
             this.tableAdapterManager.cidadeTableAdapter = null;
             this.tableAdapterManager.clienteTableAdapter = null;
             this.tableAdapterManager.compraprodutoTableAdapter = null;
@@ -112,7 +94,7 @@
             this.tableAdapterManager.logarTableAdapter = null;
             this.tableAdapterManager.lojaTableAdapter = null;
             this.tableAdapterManager.marcaTableAdapter = null;
-            this.tableAdapterManager.operadoraTableAdapter = null;
+            this.tableAdapterManager.operadoraTableAdapter = this.operadoraTableAdapter;
             this.tableAdapterManager.parcelacompraTableAdapter = null;
             this.tableAdapterManager.parcelavendaTableAdapter = null;
             this.tableAdapterManager.produtoTableAdapter = null;
@@ -126,37 +108,46 @@
             this.tableAdapterManager.UpdateOrder = trabalho_final.sistema_unifunecDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
             this.tableAdapterManager.vendaprodutoTableAdapter = null;
             // 
-            // cepDataGridView
+            // codoperadoraLabel
             // 
-            this.cepDataGridView.AutoGenerateColumns = false;
-            this.cepDataGridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.cepDataGridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dataGridViewTextBoxColumn1,
-            this.dataGridViewTextBoxColumn2});
-            this.cepDataGridView.DataSource = this.cepBindingSource;
-            this.cepDataGridView.Enabled = false;
-            this.cepDataGridView.Location = new System.Drawing.Point(12, 12);
-            this.cepDataGridView.Name = "cepDataGridView";
-            this.cepDataGridView.Size = new System.Drawing.Size(266, 220);
-            this.cepDataGridView.TabIndex = 1;
+            codoperadoraLabel.AutoSize = true;
+            codoperadoraLabel.Location = new System.Drawing.Point(33, 279);
+            codoperadoraLabel.Name = "codoperadoraLabel";
+            codoperadoraLabel.Size = new System.Drawing.Size(43, 13);
+            codoperadoraLabel.TabIndex = 1;
+            codoperadoraLabel.Text = "Código:";
             // 
-            // dataGridViewTextBoxColumn1
+            // codoperadoraTextBox
             // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "codcep";
-            this.dataGridViewTextBoxColumn1.HeaderText = "codcep";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.codoperadoraTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.operadoraBindingSource, "codoperadora", true));
+            this.codoperadoraTextBox.Enabled = false;
+            this.codoperadoraTextBox.Location = new System.Drawing.Point(36, 295);
+            this.codoperadoraTextBox.Name = "codoperadoraTextBox";
+            this.codoperadoraTextBox.Size = new System.Drawing.Size(100, 20);
+            this.codoperadoraTextBox.TabIndex = 2;
             // 
-            // dataGridViewTextBoxColumn2
+            // nomeoperadoraLabel
             // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "numerocep";
-            this.dataGridViewTextBoxColumn2.HeaderText = "numerocep";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            nomeoperadoraLabel.AutoSize = true;
+            nomeoperadoraLabel.Location = new System.Drawing.Point(199, 279);
+            nomeoperadoraLabel.Name = "nomeoperadoraLabel";
+            nomeoperadoraLabel.Size = new System.Drawing.Size(60, 13);
+            nomeoperadoraLabel.TabIndex = 3;
+            nomeoperadoraLabel.Text = "Operadora:";
+            // 
+            // TxtOperadora
+            // 
+            this.TxtOperadora.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.operadoraBindingSource, "nomeoperadora", true));
+            this.TxtOperadora.Enabled = false;
+            this.TxtOperadora.Location = new System.Drawing.Point(202, 295);
+            this.TxtOperadora.Name = "TxtOperadora";
+            this.TxtOperadora.Size = new System.Drawing.Size(100, 20);
+            this.TxtOperadora.TabIndex = 4;
             // 
             // BtnUltimo
             // 
             this.BtnUltimo.Font = new System.Drawing.Font("Arial Narrow", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnUltimo.Location = new System.Drawing.Point(232, 238);
+            this.BtnUltimo.Location = new System.Drawing.Point(256, 245);
             this.BtnUltimo.Name = "BtnUltimo";
             this.BtnUltimo.Size = new System.Drawing.Size(46, 23);
             this.BtnUltimo.TabIndex = 17;
@@ -167,7 +158,7 @@
             // BtnAnterior
             // 
             this.BtnAnterior.Font = new System.Drawing.Font("Arial Narrow", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAnterior.Location = new System.Drawing.Point(64, 238);
+            this.BtnAnterior.Location = new System.Drawing.Point(88, 245);
             this.BtnAnterior.Name = "BtnAnterior";
             this.BtnAnterior.Size = new System.Drawing.Size(46, 23);
             this.BtnAnterior.TabIndex = 16;
@@ -178,7 +169,7 @@
             // BtnProximo
             // 
             this.BtnProximo.Font = new System.Drawing.Font("Arial Narrow", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnProximo.Location = new System.Drawing.Point(180, 238);
+            this.BtnProximo.Location = new System.Drawing.Point(204, 245);
             this.BtnProximo.Name = "BtnProximo";
             this.BtnProximo.Size = new System.Drawing.Size(46, 23);
             this.BtnProximo.TabIndex = 15;
@@ -189,7 +180,7 @@
             // BtnPrimeiro
             // 
             this.BtnPrimeiro.Font = new System.Drawing.Font("Arial Narrow", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnPrimeiro.Location = new System.Drawing.Point(12, 238);
+            this.BtnPrimeiro.Location = new System.Drawing.Point(36, 245);
             this.BtnPrimeiro.Name = "BtnPrimeiro";
             this.BtnPrimeiro.Size = new System.Drawing.Size(46, 23);
             this.BtnPrimeiro.TabIndex = 14;
@@ -204,7 +195,7 @@
             this.BtnSalvar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnSalvar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnSalvar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnSalvar.Location = new System.Drawing.Point(216, 327);
+            this.BtnSalvar.Location = new System.Drawing.Point(240, 347);
             this.BtnSalvar.Name = "BtnSalvar";
             this.BtnSalvar.Size = new System.Drawing.Size(62, 23);
             this.BtnSalvar.TabIndex = 21;
@@ -218,7 +209,7 @@
             this.Excluir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Excluir.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Excluir.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.Excluir.Location = new System.Drawing.Point(148, 327);
+            this.Excluir.Location = new System.Drawing.Point(172, 347);
             this.Excluir.Name = "Excluir";
             this.Excluir.Size = new System.Drawing.Size(62, 23);
             this.Excluir.TabIndex = 20;
@@ -232,7 +223,7 @@
             this.BtnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnEditar.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnEditar.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnEditar.Location = new System.Drawing.Point(80, 327);
+            this.BtnEditar.Location = new System.Drawing.Point(104, 347);
             this.BtnEditar.Name = "BtnEditar";
             this.BtnEditar.Size = new System.Drawing.Size(62, 23);
             this.BtnEditar.TabIndex = 19;
@@ -247,7 +238,7 @@
             this.BtnNovo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnNovo.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BtnNovo.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.BtnNovo.Location = new System.Drawing.Point(12, 327);
+            this.BtnNovo.Location = new System.Drawing.Point(36, 347);
             this.BtnNovo.Name = "BtnNovo";
             this.BtnNovo.Size = new System.Drawing.Size(62, 23);
             this.BtnNovo.TabIndex = 18;
@@ -255,33 +246,38 @@
             this.BtnNovo.UseVisualStyleBackColor = false;
             this.BtnNovo.Click += new System.EventHandler(this.BtnNovo_Click);
             // 
-            // codcepTextBox
+            // dataGridView1
             // 
-            this.codcepTextBox.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cepBindingSource, "codcep", true));
-            this.codcepTextBox.Enabled = false;
-            this.codcepTextBox.Location = new System.Drawing.Point(12, 293);
-            this.codcepTextBox.Name = "codcepTextBox";
-            this.codcepTextBox.Size = new System.Drawing.Size(100, 20);
-            this.codcepTextBox.TabIndex = 22;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.codoperadoraDataGridViewTextBoxColumn,
+            this.nomeoperadoraDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.operadoraBindingSource;
+            this.dataGridView1.Location = new System.Drawing.Point(36, 12);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(266, 227);
+            this.dataGridView1.TabIndex = 22;
             // 
-            // TxtBairro
+            // codoperadoraDataGridViewTextBoxColumn
             // 
-            this.TxtBairro.DataBindings.Add(new System.Windows.Forms.Binding("Text", this.cepBindingSource, "numerocep", true));
-            this.TxtBairro.Enabled = false;
-            this.TxtBairro.Location = new System.Drawing.Point(178, 293);
-            this.TxtBairro.Name = "TxtBairro";
-            this.TxtBairro.Size = new System.Drawing.Size(100, 20);
-            this.TxtBairro.TabIndex = 24;
+            this.codoperadoraDataGridViewTextBoxColumn.DataPropertyName = "codoperadora";
+            this.codoperadoraDataGridViewTextBoxColumn.HeaderText = "Código";
+            this.codoperadoraDataGridViewTextBoxColumn.Name = "codoperadoraDataGridViewTextBoxColumn";
+            this.codoperadoraDataGridViewTextBoxColumn.ReadOnly = true;
             // 
-            // FrmCEP
+            // nomeoperadoraDataGridViewTextBoxColumn
+            // 
+            this.nomeoperadoraDataGridViewTextBoxColumn.DataPropertyName = "nomeoperadora";
+            this.nomeoperadoraDataGridViewTextBoxColumn.HeaderText = "Operadora";
+            this.nomeoperadoraDataGridViewTextBoxColumn.Name = "nomeoperadoraDataGridViewTextBoxColumn";
+            // 
+            // FrmOperadora
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(293, 372);
-            this.Controls.Add(codcepLabel);
-            this.Controls.Add(this.codcepTextBox);
-            this.Controls.Add(numerocepLabel);
-            this.Controls.Add(this.TxtBairro);
+            this.ClientSize = new System.Drawing.Size(349, 407);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.BtnSalvar);
             this.Controls.Add(this.Excluir);
             this.Controls.Add(this.BtnEditar);
@@ -290,13 +286,16 @@
             this.Controls.Add(this.BtnAnterior);
             this.Controls.Add(this.BtnProximo);
             this.Controls.Add(this.BtnPrimeiro);
-            this.Controls.Add(this.cepDataGridView);
-            this.Name = "FrmCEP";
-            this.Text = "Cadastro CEP";
-            this.Load += new System.EventHandler(this.FrmCEP_Load);
+            this.Controls.Add(codoperadoraLabel);
+            this.Controls.Add(this.codoperadoraTextBox);
+            this.Controls.Add(nomeoperadoraLabel);
+            this.Controls.Add(this.TxtOperadora);
+            this.Name = "FrmOperadora";
+            this.Text = " ";
+            this.Load += new System.EventHandler(this.FrmOperadora_Load);
             ((System.ComponentModel.ISupportInitialize)(this.sistema_unifunecDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cepBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cepDataGridView)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.operadoraBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -305,12 +304,11 @@
         #endregion
 
         private sistema_unifunecDataSet sistema_unifunecDataSet;
-        private System.Windows.Forms.BindingSource cepBindingSource;
-        private sistema_unifunecDataSetTableAdapters.cepTableAdapter cepTableAdapter;
+        private System.Windows.Forms.BindingSource operadoraBindingSource;
+        private sistema_unifunecDataSetTableAdapters.operadoraTableAdapter operadoraTableAdapter;
         private sistema_unifunecDataSetTableAdapters.TableAdapterManager tableAdapterManager;
-        private System.Windows.Forms.DataGridView cepDataGridView;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.TextBox codoperadoraTextBox;
+        private System.Windows.Forms.TextBox TxtOperadora;
         private System.Windows.Forms.Button BtnUltimo;
         private System.Windows.Forms.Button BtnAnterior;
         private System.Windows.Forms.Button BtnProximo;
@@ -319,7 +317,8 @@
         private System.Windows.Forms.Button Excluir;
         private System.Windows.Forms.Button BtnEditar;
         private System.Windows.Forms.Button BtnNovo;
-        private System.Windows.Forms.TextBox codcepTextBox;
-        private System.Windows.Forms.TextBox TxtBairro;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn codoperadoraDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nomeoperadoraDataGridViewTextBoxColumn;
     }
 }

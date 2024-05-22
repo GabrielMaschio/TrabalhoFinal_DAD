@@ -76,6 +76,7 @@ namespace trabalho_final
         private void BtnSalvar_Click(object sender, EventArgs e)
         {
             BtnSalvar.Enabled = false;
+            TxtBairro.Enabled = false;
             cepBindingSource.EndEdit();
             cepTableAdapter.Update(sistema_unifunecDataSet);
         }

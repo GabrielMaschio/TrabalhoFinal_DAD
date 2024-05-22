@@ -139,5 +139,11 @@ namespace trabalho_final
             FrmCEP frmCEP = new FrmCEP();
             frmCEP.ShowDialog();
         }
+
+        private void cadastroOperadoraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmOperadora frmOperadora = new FrmOperadora();
+            frmOperadora.ShowDialog();
+        }
     }
 }

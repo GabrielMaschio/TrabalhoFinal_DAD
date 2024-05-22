@@ -58,6 +58,12 @@
     <Compile Include="FrmCEP.Designer.cs">
       <DependentUpon>FrmCEP.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmOperadora.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmOperadora.Designer.cs">
+      <DependentUpon>FrmOperadora.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -91,6 +97,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCEP.resx">
       <DependentUpon>FrmCEP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmOperadora.resx">
+      <DependentUpon>FrmOperadora.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
