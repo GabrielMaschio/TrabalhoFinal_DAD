@@ -50,13 +50,14 @@
             this.MnuLogin = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuCadastroLogin = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuCadastroAcesso = new System.Windows.Forms.ToolStripMenuItem();
+            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.LblUsuario = new System.Windows.Forms.ToolStripStatusLabel();
-            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sistema_unifunecDataSet = new trabalho_final.sistema_unifunecDataSet();
             this.logarTableAdapter = new trabalho_final.sistema_unifunecDataSetTableAdapters.logarTableAdapter();
             this.tableAdapterManager = new trabalho_final.sistema_unifunecDataSetTableAdapters.TableAdapterManager();
             this.itensacessologinTableAdapter = new trabalho_final.sistema_unifunecDataSetTableAdapters.itensacessologinTableAdapter();
+            this.cadastroTrabalhoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sistema_unifunecDataSet)).BeginInit();
@@ -96,21 +97,21 @@
             // ruaToolStripMenuItem
             // 
             this.ruaToolStripMenuItem.Name = "ruaToolStripMenuItem";
-            this.ruaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.ruaToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.ruaToolStripMenuItem.Text = "Cadastro Rua";
             this.ruaToolStripMenuItem.Click += new System.EventHandler(this.ruaToolStripMenuItem_Click);
             // 
             // bairroToolStripMenuItem
             // 
             this.bairroToolStripMenuItem.Name = "bairroToolStripMenuItem";
-            this.bairroToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.bairroToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.bairroToolStripMenuItem.Text = "Cadastro Bairro";
             this.bairroToolStripMenuItem.Click += new System.EventHandler(this.bairroToolStripMenuItem_Click);
             // 
             // cepToolStripMenuItem
             // 
             this.cepToolStripMenuItem.Name = "cepToolStripMenuItem";
-            this.cepToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.cepToolStripMenuItem.Size = new System.Drawing.Size(155, 22);
             this.cepToolStripMenuItem.Text = "Cadastro CEP";
             this.cepToolStripMenuItem.Click += new System.EventHandler(this.cepToolStripMenuItem_Click);
             // 
@@ -141,6 +142,7 @@
             // MnuCliente
             // 
             this.MnuCliente.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.cadastroTrabalhoToolStripMenuItem,
             this.cadastroClienteToolStripMenuItem,
             this.cadastroTelefoneClienteToolStripMenuItem});
             this.MnuCliente.Name = "MnuCliente";
@@ -230,16 +232,24 @@
             // MnuCadastroLogin
             // 
             this.MnuCadastroLogin.Name = "MnuCadastroLogin";
-            this.MnuCadastroLogin.Size = new System.Drawing.Size(164, 22);
+            this.MnuCadastroLogin.Size = new System.Drawing.Size(180, 22);
             this.MnuCadastroLogin.Text = "Cadastrar Login";
             this.MnuCadastroLogin.Visible = false;
             // 
             // MnuCadastroAcesso
             // 
             this.MnuCadastroAcesso.Name = "MnuCadastroAcesso";
-            this.MnuCadastroAcesso.Size = new System.Drawing.Size(164, 22);
+            this.MnuCadastroAcesso.Size = new System.Drawing.Size(180, 22);
             this.MnuCadastroAcesso.Text = "Cadastrar Acesso";
             this.MnuCadastroAcesso.Visible = false;
+            // 
+            // logOutToolStripMenuItem
+            // 
+            this.logOutToolStripMenuItem.Image = global::trabalho_final.Properties.Resources.exit_to_app;
+            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.logOutToolStripMenuItem.Text = "&Log Out";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -257,14 +267,6 @@
             this.LblUsuario.Name = "LblUsuario";
             this.LblUsuario.Size = new System.Drawing.Size(57, 17);
             this.LblUsuario.Text = "Usuário:";
-            // 
-            // logOutToolStripMenuItem
-            // 
-            this.logOutToolStripMenuItem.Image = global::trabalho_final.Properties.Resources.exit_to_app;
-            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.logOutToolStripMenuItem.Text = "&Log Out";
-            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
             // 
             // sistema_unifunecDataSet
             // 
@@ -317,6 +319,13 @@
             // itensacessologinTableAdapter
             // 
             this.itensacessologinTableAdapter.ClearBeforeFill = true;
+            // 
+            // cadastroTrabalhoToolStripMenuItem
+            // 
+            this.cadastroTrabalhoToolStripMenuItem.Name = "cadastroTrabalhoToolStripMenuItem";
+            this.cadastroTrabalhoToolStripMenuItem.Size = new System.Drawing.Size(208, 22);
+            this.cadastroTrabalhoToolStripMenuItem.Text = "Cadastro Trabalho";
+            this.cadastroTrabalhoToolStripMenuItem.Click += new System.EventHandler(this.cadastroTrabalhoToolStripMenuItem_Click);
             // 
             // FrmPrincipal
             // 
@@ -371,5 +380,6 @@
         private System.Windows.Forms.ToolStripMenuItem cadastroClienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastroTelefoneClienteToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cadastroFuncionárioToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem cadastroTrabalhoToolStripMenuItem;
     }
 }

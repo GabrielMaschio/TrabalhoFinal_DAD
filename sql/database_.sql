@@ -5996,3 +5996,10 @@ FROM telefone, operadora
 WHERE codoperadora = codoperadora_fk;
 
 SELECT * FROM operadora;
+
+CREATE VIEW vw_trabalho AS
+SELECT codtrabalho, nometrabalho, numero
+FROM trabalho, telefone, itenstelefonetrabalho
+WHERE codtrabalho = codtrabalho_fk AND codtelefone = codtelefone_fk;
+
+SELECT * FROM trabalho;
