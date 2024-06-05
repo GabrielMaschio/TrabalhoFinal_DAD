@@ -31,10 +31,6 @@
             this.components = new System.ComponentModel.Container();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.LblUsuario = new System.Windows.Forms.ToolStripStatusLabel();
-            this.sistema_unifunecDataSet = new trabalho_final.sistema_unifunecDataSet();
-            this.logarTableAdapter = new trabalho_final.sistema_unifunecDataSetTableAdapters.logarTableAdapter();
-            this.tableAdapterManager = new trabalho_final.sistema_unifunecDataSetTableAdapters.TableAdapterManager();
-            this.itensacessologinTableAdapter = new trabalho_final.sistema_unifunecDataSetTableAdapters.itensacessologinTableAdapter();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.MnuEndereco = new System.Windows.Forms.ToolStripMenuItem();
             this.ruaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -59,11 +55,15 @@
             this.MnuLogin = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuCadastroLogin = new System.Windows.Forms.ToolStripMenuItem();
             this.MnuCadastroAcesso = new System.Windows.Forms.ToolStripMenuItem();
-            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.logOutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sistema_unifunecDataSet = new trabalho_final.sistema_unifunecDataSet();
+            this.logarTableAdapter = new trabalho_final.sistema_unifunecDataSetTableAdapters.logarTableAdapter();
+            this.tableAdapterManager = new trabalho_final.sistema_unifunecDataSetTableAdapters.TableAdapterManager();
+            this.itensacessologinTableAdapter = new trabalho_final.sistema_unifunecDataSetTableAdapters.itensacessologinTableAdapter();
             this.statusStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sistema_unifunecDataSet)).BeginInit();
             this.menuStrip1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sistema_unifunecDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // statusStrip1
@@ -82,58 +82,6 @@
             this.LblUsuario.Name = "LblUsuario";
             this.LblUsuario.Size = new System.Drawing.Size(57, 17);
             this.LblUsuario.Text = "Usuário:";
-            // 
-            // sistema_unifunecDataSet
-            // 
-            this.sistema_unifunecDataSet.DataSetName = "sistema_unifunecDataSet";
-            this.sistema_unifunecDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // logarTableAdapter
-            // 
-            this.logarTableAdapter.ClearBeforeFill = true;
-            // 
-            // tableAdapterManager
-            // 
-            this.tableAdapterManager.acessoTableAdapter = null;
-            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
-            this.tableAdapterManager.bairroTableAdapter = null;
-            this.tableAdapterManager.cepTableAdapter = null;
-            this.tableAdapterManager.cidadeTableAdapter = null;
-            this.tableAdapterManager.clienteTableAdapter = null;
-            this.tableAdapterManager.compraprodutoTableAdapter = null;
-            this.tableAdapterManager.controlelogsistemaTableAdapter = null;
-            this.tableAdapterManager.fornecedorTableAdapter = null;
-            this.tableAdapterManager.funcaoTableAdapter = null;
-            this.tableAdapterManager.funcionariosTableAdapter = null;
-            this.tableAdapterManager.imagensTableAdapter = null;
-            this.tableAdapterManager.itensacessologinTableAdapter = null;
-            this.tableAdapterManager.itenscompraprodutoTableAdapter = null;
-            this.tableAdapterManager.itenstelclienteTableAdapter = null;
-            this.tableAdapterManager.itenstelefonefornecedorTableAdapter = null;
-            this.tableAdapterManager.itenstelefonefuncionarioTableAdapter = null;
-            this.tableAdapterManager.itenstelefonelojaTableAdapter = null;
-            this.tableAdapterManager.itenstelefonetrabalhoTableAdapter = null;
-            this.tableAdapterManager.itensvendaprodutoTableAdapter = null;
-            this.tableAdapterManager.logarTableAdapter = this.logarTableAdapter;
-            this.tableAdapterManager.lojaTableAdapter = null;
-            this.tableAdapterManager.marcaTableAdapter = null;
-            this.tableAdapterManager.operadoraTableAdapter = null;
-            this.tableAdapterManager.parcelacompraTableAdapter = null;
-            this.tableAdapterManager.parcelavendaTableAdapter = null;
-            this.tableAdapterManager.produtoTableAdapter = null;
-            this.tableAdapterManager.ruaTableAdapter = null;
-            this.tableAdapterManager.sexoTableAdapter = null;
-            this.tableAdapterManager.situacaoTableAdapter = null;
-            this.tableAdapterManager.telefoneTableAdapter = null;
-            this.tableAdapterManager.tipoTableAdapter = null;
-            this.tableAdapterManager.trabalhoTableAdapter = null;
-            this.tableAdapterManager.ufTableAdapter = null;
-            this.tableAdapterManager.UpdateOrder = trabalho_final.sistema_unifunecDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
-            this.tableAdapterManager.vendaprodutoTableAdapter = null;
-            // 
-            // itensacessologinTableAdapter
-            // 
-            this.itensacessologinTableAdapter.ClearBeforeFill = true;
             // 
             // contextMenuStrip1
             // 
@@ -227,6 +175,7 @@
             this.cadastroClienteToolStripMenuItem.Name = "cadastroClienteToolStripMenuItem";
             this.cadastroClienteToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
             this.cadastroClienteToolStripMenuItem.Text = "Cadastro Cliente";
+            this.cadastroClienteToolStripMenuItem.Click += new System.EventHandler(this.cadastroClienteToolStripMenuItem_Click);
             // 
             // cadastroTelefoneClienteToolStripMenuItem
             // 
@@ -315,14 +264,6 @@
             this.MnuCadastroAcesso.Text = "Cadastrar Acesso";
             this.MnuCadastroAcesso.Visible = false;
             // 
-            // logOutToolStripMenuItem
-            // 
-            this.logOutToolStripMenuItem.Image = global::trabalho_final.Properties.Resources.exit_to_app;
-            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
-            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
-            this.logOutToolStripMenuItem.Text = "&Log Out";
-            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -342,7 +283,66 @@
             this.menuStrip1.Size = new System.Drawing.Size(806, 24);
             this.menuStrip1.TabIndex = 6;
             this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
+            // 
+            // logOutToolStripMenuItem
+            // 
+            this.logOutToolStripMenuItem.Image = global::trabalho_final.Properties.Resources.exit_to_app;
+            this.logOutToolStripMenuItem.Name = "logOutToolStripMenuItem";
+            this.logOutToolStripMenuItem.Size = new System.Drawing.Size(164, 22);
+            this.logOutToolStripMenuItem.Text = "&Log Out";
+            this.logOutToolStripMenuItem.Click += new System.EventHandler(this.logOutToolStripMenuItem_Click);
+            // 
+            // sistema_unifunecDataSet
+            // 
+            this.sistema_unifunecDataSet.DataSetName = "sistema_unifunecDataSet";
+            this.sistema_unifunecDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // logarTableAdapter
+            // 
+            this.logarTableAdapter.ClearBeforeFill = true;
+            // 
+            // tableAdapterManager
+            // 
+            this.tableAdapterManager.acessoTableAdapter = null;
+            this.tableAdapterManager.BackupDataSetBeforeUpdate = false;
+            this.tableAdapterManager.bairroTableAdapter = null;
+            this.tableAdapterManager.cepTableAdapter = null;
+            this.tableAdapterManager.cidadeTableAdapter = null;
+            this.tableAdapterManager.clienteTableAdapter = null;
+            this.tableAdapterManager.compraprodutoTableAdapter = null;
+            this.tableAdapterManager.controlelogsistemaTableAdapter = null;
+            this.tableAdapterManager.fornecedorTableAdapter = null;
+            this.tableAdapterManager.funcaoTableAdapter = null;
+            this.tableAdapterManager.funcionariosTableAdapter = null;
+            this.tableAdapterManager.imagensTableAdapter = null;
+            this.tableAdapterManager.itensacessologinTableAdapter = null;
+            this.tableAdapterManager.itenscompraprodutoTableAdapter = null;
+            this.tableAdapterManager.itenstelclienteTableAdapter = null;
+            this.tableAdapterManager.itenstelefonefornecedorTableAdapter = null;
+            this.tableAdapterManager.itenstelefonefuncionarioTableAdapter = null;
+            this.tableAdapterManager.itenstelefonelojaTableAdapter = null;
+            this.tableAdapterManager.itenstelefonetrabalhoTableAdapter = null;
+            this.tableAdapterManager.itensvendaprodutoTableAdapter = null;
+            this.tableAdapterManager.logarTableAdapter = this.logarTableAdapter;
+            this.tableAdapterManager.lojaTableAdapter = null;
+            this.tableAdapterManager.marcaTableAdapter = null;
+            this.tableAdapterManager.operadoraTableAdapter = null;
+            this.tableAdapterManager.parcelacompraTableAdapter = null;
+            this.tableAdapterManager.parcelavendaTableAdapter = null;
+            this.tableAdapterManager.produtoTableAdapter = null;
+            this.tableAdapterManager.ruaTableAdapter = null;
+            this.tableAdapterManager.sexoTableAdapter = null;
+            this.tableAdapterManager.situacaoTableAdapter = null;
+            this.tableAdapterManager.telefoneTableAdapter = null;
+            this.tableAdapterManager.tipoTableAdapter = null;
+            this.tableAdapterManager.trabalhoTableAdapter = null;
+            this.tableAdapterManager.ufTableAdapter = null;
+            this.tableAdapterManager.UpdateOrder = trabalho_final.sistema_unifunecDataSetTableAdapters.TableAdapterManager.UpdateOrderOption.InsertUpdateDelete;
+            this.tableAdapterManager.vendaprodutoTableAdapter = null;
+            // 
+            // itensacessologinTableAdapter
+            // 
+            this.itensacessologinTableAdapter.ClearBeforeFill = true;
             // 
             // FrmPrincipal
             // 
@@ -358,9 +358,9 @@
             this.Load += new System.EventHandler(this.FrmPrincipal_Load);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.sistema_unifunecDataSet)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.sistema_unifunecDataSet)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

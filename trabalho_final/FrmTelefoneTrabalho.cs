@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using trabalho_final.sistema_unifunecDataSetTableAdapters;
 
 namespace trabalho_final
 {

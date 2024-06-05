@@ -40,7 +40,6 @@
             this.itenstelefonetrabalhoDataGridView = new System.Windows.Forms.DataGridView();
             this.TxtTrabalho = new System.Windows.Forms.ComboBox();
             this.trabalhoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.itenstelefonetrabalhoBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.TxtTelefone = new System.Windows.Forms.ComboBox();
             this.telefoneBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.BtnSalvar = new System.Windows.Forms.Button();
@@ -61,7 +60,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.itenstelefonetrabalhoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.itenstelefonetrabalhoDataGridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.trabalhoBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itenstelefonetrabalhoBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.telefoneBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwitenstelefoneBindingSource)).BeginInit();
             this.SuspendLayout();
@@ -176,11 +174,6 @@
             // 
             this.trabalhoBindingSource.DataMember = "trabalho";
             this.trabalhoBindingSource.DataSource = this.sistema_unifunecDataSet;
-            // 
-            // itenstelefonetrabalhoBindingSource1
-            // 
-            this.itenstelefonetrabalhoBindingSource1.DataMember = "itenstelefonetrabalho";
-            this.itenstelefonetrabalhoBindingSource1.DataSource = this.sistema_unifunecDataSet;
             // 
             // TxtTelefone
             // 
@@ -314,13 +307,13 @@
             // nometrabalhoDataGridViewTextBoxColumn
             // 
             this.nometrabalhoDataGridViewTextBoxColumn.DataPropertyName = "nometrabalho";
-            this.nometrabalhoDataGridViewTextBoxColumn.HeaderText = "Trabalho";
+            this.nometrabalhoDataGridViewTextBoxColumn.HeaderText = "nometrabalho";
             this.nometrabalhoDataGridViewTextBoxColumn.Name = "nometrabalhoDataGridViewTextBoxColumn";
             // 
             // numeroDataGridViewTextBoxColumn
             // 
             this.numeroDataGridViewTextBoxColumn.DataPropertyName = "numero";
-            this.numeroDataGridViewTextBoxColumn.HeaderText = "Telefone";
+            this.numeroDataGridViewTextBoxColumn.HeaderText = "numero";
             this.numeroDataGridViewTextBoxColumn.Name = "numeroDataGridViewTextBoxColumn";
             // 
             // FrmTelefoneTrabalho
@@ -348,7 +341,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.itenstelefonetrabalhoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.itenstelefonetrabalhoDataGridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trabalhoBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.itenstelefonetrabalhoBindingSource1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.telefoneBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vwitenstelefoneBindingSource)).EndInit();
             this.ResumeLayout(false);
@@ -366,7 +358,6 @@
         private sistema_unifunecDataSetTableAdapters.trabalhoTableAdapter trabalhoTableAdapter;
         private System.Windows.Forms.ComboBox TxtTrabalho;
         private System.Windows.Forms.BindingSource trabalhoBindingSource;
-        private System.Windows.Forms.BindingSource itenstelefonetrabalhoBindingSource1;
         private System.Windows.Forms.ComboBox TxtTelefone;
         private sistema_unifunecDataSetTableAdapters.telefoneTableAdapter telefoneTableAdapter;
         private System.Windows.Forms.BindingSource telefoneBindingSource;

@@ -168,5 +168,11 @@ namespace trabalho_final
         {
 
         }
+
+        private void cadastroClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCliente frmCliente = new FrmCliente();   
+            frmCliente.ShowDialog();
+        }
     }
 }
