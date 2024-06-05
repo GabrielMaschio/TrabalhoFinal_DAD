@@ -157,5 +157,16 @@ namespace trabalho_final
             FrmTrabalho frmTrabalho = new FrmTrabalho();
             frmTrabalho.ShowDialog();
         }
+
+        private void cadastroTelefoneTrabalhoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTelefoneTrabalho frmTelefoneTrabalho = new FrmTelefoneTrabalho();
+            frmTelefoneTrabalho.ShowDialog();
+        }
+
+        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+
+        }
     }
 }

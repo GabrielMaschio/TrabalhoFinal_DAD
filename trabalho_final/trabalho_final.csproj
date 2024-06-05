@@ -90,6 +90,12 @@
     <Compile Include="FrmTelefone.Designer.cs">
       <DependentUpon>FrmTelefone.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmTelefoneTrabalho.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTelefoneTrabalho.Designer.cs">
+      <DependentUpon>FrmTelefoneTrabalho.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmTrabalho.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     <EmbeddedResource Include="FrmTelefone.resx">
       <DependentUpon>FrmTelefone.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmTelefoneTrabalho.resx">
+      <DependentUpon>FrmTelefoneTrabalho.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmTrabalho.resx">
       <DependentUpon>FrmTrabalho.cs</DependentUpon>
     </EmbeddedResource>
@@ -160,7 +169,6 @@
     <None Include="sistema_unifunecDataSet.xss">
       <DependentUpon>sistema_unifunecDataSet.xsd</DependentUpon>
     </None>
-    <None Include="trabalho_final.sistema_unifunecDataSetTableAdapters.QueriesTableAdapter.datasource" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

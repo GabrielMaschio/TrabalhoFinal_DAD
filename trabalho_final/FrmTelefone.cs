@@ -55,21 +55,25 @@ namespace trabalho_final
         private void BtnPrimeiro_Click(object sender, EventArgs e)
         {
             telefoneBindingSource.MoveFirst();
+            vwtelefoneBindingSource.MoveFirst();
         }
 
         private void BtnAnterior_Click(object sender, EventArgs e)
         {
             telefoneBindingSource.MovePrevious();
+            vwtelefoneBindingSource.MovePrevious();
         }
 
         private void BtnProximo_Click(object sender, EventArgs e)
         {
             telefoneBindingSource.MoveNext();
+            vwtelefoneBindingSource.MoveNext();
         }
 
         private void BtnUltimo_Click(object sender, EventArgs e)
         {
             telefoneBindingSource.MoveLast();
+            vwtelefoneBindingSource.MoveLast();
         }
 
         private void BtnNovo_Click(object sender, EventArgs e)
