@@ -134,9 +134,12 @@ CREATE TABLE funcionarios (
 
 -- ITENSTELEFONEFUNCIONARIO = {@(#CODFUNCIONARIO_fk, #CODTELEFONE_fk)}
 CREATE TABLE itenstelefonefuncionario (
-    codfuncionario_fk INTEGER REFERENCES funcionarios(codfuncionario),
-    codtelefone_fk INTEGER REFERENCES telefone(codtelefone)
+    codfuncionario_fk INTEGER NOT NULL REFERENCES funcionarios(codfuncionario),
+    codtelefone_fk INTEGER NOT NULL REFERENCES telefone(codtelefone),
+	PRIMARY KEY (codfuncionario_fk, codtelefone_fk)
 );
+
+DROP TABLE itenstelefonefuncionario	;
 
 
 -- LOGIN = {@CODLOGIN, USUARIO, SENHA, #CODFUNCIONARIO_fk}
@@ -5976,6 +5979,7 @@ INSERT INTO acesso(nomeacesso) VALUES('Loja');
 INSERT INTO acesso(nomeacesso) VALUES('Financeiro');
 INSERT INTO acesso(nomeacesso) VALUES('Login');
 INSERT INTO acesso(nomeacesso) VALUES('Telefone');
+INSERT INTO acesso(nomeacesso) VALUES('AdmLogin');
 
 SELECT * FROM acesso ORDER BY codacesso;
 
@@ -6003,3 +6007,137 @@ FROM trabalho, telefone, itenstelefonetrabalho
 WHERE codtrabalho = codtrabalho_fk AND codtelefone = codtelefone_fk;
 
 SELECT * FROM trabalho;
+
+CREATE VIEW vw_itenstelefone AS
+SELECT nometrabalho, numero
+FROM itenstelefonetrabalho, trabalho, telefone
+WHERE codtrabalho = codtrabalho_fk AND codtelefone = codtelefone_fk;
+
+SELECT * FROM vw_itenstelefone;
+
+CREATE VIEW vw_cliente AS
+SELECT c.nomecliente, c.datanasc, s.nomesexo, c.numerocasa, r.nomerua, b.nomebairro, ce.numerocep, ci.nomecidade, t.nometrabalho, c.salario
+FROM cliente c, sexo s, rua r, bairro b, cep ce, cidade ci, trabalho t
+WHERE c.codsexo_fk = s.codsexo AND c.codrua_fk = r.codrua AND c.codbairro_fk = b.codbairro AND c.codcep_fk = ce.codcep AND c.codcidade_fk = ci.codcidade AND c.codtrabalho_fk = t.codtrabalho;
+
+
+SELECT * FROM vw_cliente;
+
+CREATE VIEW vw_itenstelcliente AS
+SELECT nomecliente, numero
+FROM itenstelcliente, cliente, telefone
+WHERE codcliente_fk = codcliente AND codtelefone = codtelefone_fk;
+
+SELECT * FROM vw_itenstelcliente;
+
+CREATE VIEW vw_funcionarios AS
+SELECT codfuncionario, nomefuncionario, nomerua, numerocasa, nomebairro, numerocep, nomecidade, salario, nomefuncao, nomeloja 
+FROM funcionarios, rua, bairro, cep, cidade, funcao, loja
+WHERE codrua = codrua_fk AND codbairro = codbairro_fk AND codcep = codcep_fk AND codcidade = codcidade_fk AND codfuncao = codfuncao_fk AND codloja = codloja_fk;
+
+SELECT * FROM vw_funcionarios;
+
+CREATE VIEW vw_itenstelefoneloja AS 
+SELECT nomeloja, numero
+FROM itenstelefoneloja, loja, telefone
+WHERE codloja = codloja_fk AND codtelefone = codtelefone_fk;
+
+SELECT * FROM vw_itenstelefoneloja;
+
+CREATE VIEW vw_itenstelefonefuncionario AS
+SELECT nomefuncionario, numero
+FROM itenstelefonefuncionario, funcionarios, telefone
+WHERE codfuncionario = codfuncionario_fk AND codtelefone = codtelefone_fk;
+
+SELECT * FROM vw_itenstelefonefuncionario;
+
+CREATE VIEW vw_logar AS
+SELECT codlogin, usuario, senha, nomefuncionario
+FROM logar, funcionarios
+WHERE codfuncionario = codfuncionario_fk;
+
+SELECT * FROM vw_logar;
+
+CREATE VIEW vw_itensacessologin AS
+SELECT usuario, nomeacesso
+FROM itensacessologin, acesso, logar
+WHERE codacesso = codacesso_fk AND codlogin = codlogin_fk;
+
+SELECT * FROM vw_itensacessologin;
+
+CREATE VIEW vw_controlelogsistema AS
+SELECT codcontrole, usuario, datalogin, hora
+FROM controlelogsistema, logar
+WHERE codlogin = codlogin_fk;
+
+SELECT * FROM vw_controlelogsistema;
+
+CREATE VIEW vw_fornecedor AS
+SELECT codfornecedor, nomefornecedor, numerocasa, nomerua, nomebairro, numerocep, nomecidade
+FROM fornecedor, rua, bairro, cep, cidade
+WHERE codrua = codrua_fk AND codbairro = codbairro_fk AND codcep = codcep_fk AND codcidade = codcidade_fk;
+
+SELECT * FROM vw_fornecedor;
+
+CREATE VIEW vw_itenstelefonefornecedor AS
+SELECT nomefornecedor, numero
+FROM itenstelefonefornecedor, fornecedor, telefone
+WHERE codfornecedor = codfornecedor_fk AND codtelefone = codtelefone_fk;
+
+SELECT * FROM vw_itenstelefonefornecedor;
+
+CREATE VIEW vw_produto AS
+SELECT codproduto, nomeproduto, quantidade, valor, nometipo, nomemarca
+FROM produto, marca, tipo
+WHERE codtipo = codtipo_fk AND codmarca = codmarca_fk;
+
+SELECT * FROM vw_produto;
+
+CREATE VIEW vw_imagem AS
+SELECT 	codimagens, descricao, nomeproduto
+FROM imagens, produto
+WHERE codproduto = codproduto_fk;
+
+SELECT * FROM vw_imagem;
+
+CREATE VIEW vw_compraproduto AS
+SELECT codcompra, datacompra, nomefornecedor, nomefuncionario
+FROM compraproduto, fornecedor, funcionarios
+WHERE codfornecedor = codfornecedor_fk AND codfuncionario = codfuncionario_fk;
+
+SELECT * FROM vw_compraproduto;
+
+CREATE VIEW vw_itenscompraproduto AS
+SELECT codcompra_fk, nomeproduto, i.quantidade, valorc 
+FROM itenscompraproduto i, compraproduto, produto
+WHERE codcompra = codcompra_fk AND codproduto = codproduto_fk;
+
+SELECT * FROM vw_itenscompraproduto;
+
+CREATE VIEW vw_vendaproduto AS
+SELECT codvenda, datavenda, nomecliente, nomefuncionario
+FROM vendaproduto, cliente, funcionarios
+WHERE codcliente = codcliente_fk AND codfuncionario = codfuncionario_fk;
+
+SELECT * FROM vw_vendaproduto;
+
+CREATE VIEW vw_itensvendaproduto AS
+SELECT codvenda_fk, nomeproduto, i.quantidade, i.valor
+FROM itensvendaproduto i, vendaproduto, produto
+WHERE codvenda = codvenda_fk AND codproduto = codproduto_fk;
+
+SELECT * FROM vw_itensvendaproduto;
+
+CREATE VIEW vw_parcelacompra AS
+SELECT codparcelacompra, codcompra_fk, datavencimento, parcelacompra.valor, nomesituacao 
+FROM parcelacompra, compraproduto, situacao
+WHERE codcompra = codcompra_fk AND codsituacao = codsituacao_fk;
+
+SELECT * FROM vw_parcelacompra;
+
+CREATE VIEW vw_parcelavenda AS
+SELECT codparcela, codvenda_fk, datavencimento, valor, nomesituacao
+FROM parcelavenda, vendaproduto, situacao
+WHERE codvenda = codvenda_fk AND codsituacao = codsituacao_fk;
+
+SELECT * FROM vw_parcelavenda;
