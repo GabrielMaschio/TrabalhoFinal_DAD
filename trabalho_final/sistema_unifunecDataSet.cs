@@ -4,6 +4,9 @@
 
     partial class sistema_unifunecDataSet
     {
+        partial class funcionariosDataTable
+        {
+        }
     }
 }
 

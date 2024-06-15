@@ -60,7 +60,9 @@
             this.TxtCep = new System.Windows.Forms.ComboBox();
             this.cepBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TxtCidade = new System.Windows.Forms.ComboBox();
+            this.cidadeBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.TxtTrabalho = new System.Windows.Forms.ComboBox();
+            this.trabalhoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.PicCliente = new System.Windows.Forms.PictureBox();
             this.BtnAddImg = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
@@ -75,10 +77,6 @@
             this.vw_clienteBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.vw_clienteTableAdapter = new trabalho_final.sistema_unifunecDataSetTableAdapters.vw_clienteTableAdapter();
             this.vw_clienteDataGridView = new System.Windows.Forms.DataGridView();
-            this.cidadeBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.cidadeTableAdapter = new trabalho_final.sistema_unifunecDataSetTableAdapters.cidadeTableAdapter();
-            this.trabalhoBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.trabalhoTableAdapter = new trabalho_final.sistema_unifunecDataSetTableAdapters.trabalhoTableAdapter();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -89,6 +87,8 @@
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cidadeTableAdapter = new trabalho_final.sistema_unifunecDataSetTableAdapters.cidadeTableAdapter();
+            this.trabalhoTableAdapter = new trabalho_final.sistema_unifunecDataSetTableAdapters.trabalhoTableAdapter();
             nomeclienteLabel = new System.Windows.Forms.Label();
             datanascLabel = new System.Windows.Forms.Label();
             codsexo_fkLabel = new System.Windows.Forms.Label();
@@ -105,11 +105,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.ruaBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bairroBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.cepBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cidadeBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trabalhoBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicCliente)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vw_clienteBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.vw_clienteDataGridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cidadeBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trabalhoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // nomeclienteLabel
@@ -393,6 +393,11 @@
             this.TxtCidade.TabIndex = 27;
             this.TxtCidade.ValueMember = "codcidade";
             // 
+            // cidadeBindingSource
+            // 
+            this.cidadeBindingSource.DataMember = "cidade";
+            this.cidadeBindingSource.DataSource = this.sistema_unifunecDataSet;
+            // 
             // TxtTrabalho
             // 
             this.TxtTrabalho.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.clienteBindingSource, "codtrabalho_fk", true));
@@ -405,6 +410,11 @@
             this.TxtTrabalho.Size = new System.Drawing.Size(152, 21);
             this.TxtTrabalho.TabIndex = 28;
             this.TxtTrabalho.ValueMember = "codtrabalho";
+            // 
+            // trabalhoBindingSource
+            // 
+            this.trabalhoBindingSource.DataMember = "trabalho";
+            this.trabalhoBindingSource.DataSource = this.sistema_unifunecDataSet;
             // 
             // PicCliente
             // 
@@ -564,24 +574,6 @@
             this.vw_clienteDataGridView.Size = new System.Drawing.Size(1077, 220);
             this.vw_clienteDataGridView.TabIndex = 40;
             // 
-            // cidadeBindingSource
-            // 
-            this.cidadeBindingSource.DataMember = "cidade";
-            this.cidadeBindingSource.DataSource = this.sistema_unifunecDataSet;
-            // 
-            // cidadeTableAdapter
-            // 
-            this.cidadeTableAdapter.ClearBeforeFill = true;
-            // 
-            // trabalhoBindingSource
-            // 
-            this.trabalhoBindingSource.DataMember = "trabalho";
-            this.trabalhoBindingSource.DataSource = this.sistema_unifunecDataSet;
-            // 
-            // trabalhoTableAdapter
-            // 
-            this.trabalhoTableAdapter.ClearBeforeFill = true;
-            // 
             // dataGridViewTextBoxColumn1
             // 
             this.dataGridViewTextBoxColumn1.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
@@ -643,6 +635,14 @@
             this.dataGridViewTextBoxColumn10.HeaderText = "Salário";
             this.dataGridViewTextBoxColumn10.Name = "dataGridViewTextBoxColumn10";
             // 
+            // cidadeTableAdapter
+            // 
+            this.cidadeTableAdapter.ClearBeforeFill = true;
+            // 
+            // trabalhoTableAdapter
+            // 
+            this.trabalhoTableAdapter.ClearBeforeFill = true;
+            // 
             // FrmCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -688,11 +688,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.ruaBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bairroBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.cepBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cidadeBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.trabalhoBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.PicCliente)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vw_clienteBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.vw_clienteDataGridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cidadeBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trabalhoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

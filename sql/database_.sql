@@ -139,7 +139,6 @@ CREATE TABLE itenstelefonefuncionario (
 	PRIMARY KEY (codfuncionario_fk, codtelefone_fk)
 );
 
-DROP TABLE itenstelefonefuncionario	;
 
 
 -- LOGIN = {@CODLOGIN, USUARIO, SENHA, #CODFUNCIONARIO_fk}

@@ -48,11 +48,23 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmAcessoLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmAcessoLogin.Designer.cs">
+      <DependentUpon>FrmAcessoLogin.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmBairro.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmBairro.Designer.cs">
       <DependentUpon>FrmBairro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmCadastrarLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCadastrarLogin.Designer.cs">
+      <DependentUpon>FrmCadastrarLogin.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmCEP.cs">
       <SubType>Form</SubType>
@@ -66,11 +78,65 @@
     <Compile Include="FrmCliente.Designer.cs">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmCompraProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmCompraProduto.Designer.cs">
+      <DependentUpon>FrmCompraProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFornecedor.Designer.cs">
+      <DependentUpon>FrmFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFuncao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFuncao.Designer.cs">
+      <DependentUpon>FrmFuncao.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmFuncionarios.Designer.cs">
+      <DependentUpon>FrmFuncionarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmImagemProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmImagemProduto.Designer.cs">
+      <DependentUpon>FrmImagemProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmLoja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmLoja.Designer.cs">
+      <DependentUpon>FrmLoja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmMarca.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmMarca.Designer.cs">
+      <DependentUpon>FrmMarca.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmOperadora.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmOperadora.Designer.cs">
       <DependentUpon>FrmOperadora.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmParcelaCompra.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmParcelaCompra.Designer.cs">
+      <DependentUpon>FrmParcelaCompra.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmParcelaVenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmParcelaVenda.Designer.cs">
+      <DependentUpon>FrmParcelaVenda.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmPrincipal.cs">
       <SubType>Form</SubType>
@@ -84,11 +150,29 @@
     <Compile Include="FrmLogin.Designer.cs">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmProduto.Designer.cs">
+      <DependentUpon>FrmProduto.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRegistros.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRegistros.Designer.cs">
+      <DependentUpon>FrmRegistros.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmRua.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmRua.Designer.cs">
       <DependentUpon>FrmRua.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSituacao.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSituacao.Designer.cs">
+      <DependentUpon>FrmSituacao.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmTelefone.cs">
       <SubType>Form</SubType>
@@ -96,17 +180,53 @@
     <Compile Include="FrmTelefone.Designer.cs">
       <DependentUpon>FrmTelefone.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmTelefoneCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTelefoneCliente.Designer.cs">
+      <DependentUpon>FrmTelefoneCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTelefoneFornecedor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTelefoneFornecedor.Designer.cs">
+      <DependentUpon>FrmTelefoneFornecedor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTelefoneFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTelefoneFuncionarios.Designer.cs">
+      <DependentUpon>FrmTelefoneFuncionarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmTelefoneLoja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTelefoneLoja.Designer.cs">
+      <DependentUpon>FrmTelefoneLoja.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmTelefoneTrabalho.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmTelefoneTrabalho.Designer.cs">
       <DependentUpon>FrmTelefoneTrabalho.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmTipo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmTipo.Designer.cs">
+      <DependentUpon>FrmTipo.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmTrabalho.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmTrabalho.Designer.cs">
       <DependentUpon>FrmTrabalho.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmVendaProduto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmVendaProduto.Designer.cs">
+      <DependentUpon>FrmVendaProduto.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -118,8 +238,14 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>sistema_unifunecDataSet.xsd</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="FrmAcessoLogin.resx">
+      <DependentUpon>FrmAcessoLogin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmBairro.resx">
       <DependentUpon>FrmBairro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmCadastrarLogin.resx">
+      <DependentUpon>FrmCadastrarLogin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmCEP.resx">
       <DependentUpon>FrmCEP.cs</DependentUpon>
@@ -127,8 +253,35 @@
     <EmbeddedResource Include="FrmCliente.resx">
       <DependentUpon>FrmCliente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmCompraProduto.resx">
+      <DependentUpon>FrmCompraProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFornecedor.resx">
+      <DependentUpon>FrmFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFuncao.resx">
+      <DependentUpon>FrmFuncao.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmFuncionarios.resx">
+      <DependentUpon>FrmFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmImagemProduto.resx">
+      <DependentUpon>FrmImagemProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmLoja.resx">
+      <DependentUpon>FrmLoja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmMarca.resx">
+      <DependentUpon>FrmMarca.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmOperadora.resx">
       <DependentUpon>FrmOperadora.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmParcelaCompra.resx">
+      <DependentUpon>FrmParcelaCompra.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmParcelaVenda.resx">
+      <DependentUpon>FrmParcelaVenda.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmPrincipal.resx">
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
@@ -136,17 +289,44 @@
     <EmbeddedResource Include="FrmLogin.resx">
       <DependentUpon>FrmLogin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmProduto.resx">
+      <DependentUpon>FrmProduto.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRegistros.resx">
+      <DependentUpon>FrmRegistros.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmRua.resx">
       <DependentUpon>FrmRua.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSituacao.resx">
+      <DependentUpon>FrmSituacao.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmTelefone.resx">
       <DependentUpon>FrmTelefone.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmTelefoneCliente.resx">
+      <DependentUpon>FrmTelefoneCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTelefoneFornecedor.resx">
+      <DependentUpon>FrmTelefoneFornecedor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTelefoneFuncionarios.resx">
+      <DependentUpon>FrmTelefoneFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmTelefoneLoja.resx">
+      <DependentUpon>FrmTelefoneLoja.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmTelefoneTrabalho.resx">
       <DependentUpon>FrmTelefoneTrabalho.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="FrmTipo.resx">
+      <DependentUpon>FrmTipo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmTrabalho.resx">
       <DependentUpon>FrmTrabalho.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmVendaProduto.resx">
+      <DependentUpon>FrmVendaProduto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -182,7 +362,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\IMG_7268.jpeg" />
+  </ItemGroup>
   <ItemGroup>
     <None Include="img\exit_to_app.png" />
   </ItemGroup>

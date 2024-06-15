@@ -60,6 +60,7 @@ namespace trabalho_final
                                 MnuLoja.Visible = true;
                                 MnuCadastroLogin.Visible = true;
                                 MnuCadastroAcesso.Visible = true;
+                                MnuRegistros.Visible = true;
                                 break;
                             case 2:
                                 MnuFornecedor.Visible = true;
@@ -91,6 +92,7 @@ namespace trabalho_final
                             case 11:
                                 MnuCadastroLogin.Visible = true;
                                 MnuCadastroAcesso.Visible = true;
+                                MnuRegistros.Visible = true;
                                 break;
                             case 12:
                                 MnuTelefone.Visible = true;
@@ -173,6 +175,126 @@ namespace trabalho_final
         {
             FrmCliente frmCliente = new FrmCliente();   
             frmCliente.ShowDialog();
+        }
+
+        private void cadastroTelefoneClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTelefoneCliente frmTelefoneCliente = new FrmTelefoneCliente();
+            frmTelefoneCliente.ShowDialog();
+        }
+
+        private void cadastroFunçãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmFuncao frmFuncao = new FrmFuncao();  
+            frmFuncao.ShowDialog();
+        }
+
+        private void cadastrarLojaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmLoja frmLoja = new FrmLoja();   
+            frmLoja.ShowDialog();
+        }
+
+        private void cadastroFuncionárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmFuncionarios frmFuncionarios = new FrmFuncionarios();
+            frmFuncionarios.ShowDialog();
+        }
+
+        private void cadastrarTelefoneLojasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTelefoneLoja frmTelefoneLoja = new FrmTelefoneLoja();
+            frmTelefoneLoja.ShowDialog();
+        }
+
+        private void cadastroTelefoneFuncionárioToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTelefoneFuncionarios frmTelefoneFuncionario = new FrmTelefoneFuncionarios();
+            frmTelefoneFuncionario.ShowDialog();
+        }
+
+        private void MnuCadastroLogin_Click(object sender, EventArgs e)
+        {
+            FrmCadastrarLogin frmCadastrarLogin = new FrmCadastrarLogin();
+            frmCadastrarLogin.ShowDialog();
+        }
+
+        private void MnuCadastroAcesso_Click(object sender, EventArgs e)
+        {
+            FrmAcessoLogin frmAcessoLogin = new FrmAcessoLogin();
+            frmAcessoLogin.ShowDialog();
+        }
+
+        private void registrosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmRegistros frmRegistros = new FrmRegistros();
+            frmRegistros.ShowDialog();
+        }
+
+        private void cadastrarFornecedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmFornecedor frmFornecedor = new FrmFornecedor();  
+            frmFornecedor.ShowDialog();
+        }
+
+        private void cadastroTelefoneFornecedorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTelefoneFornecedor frmTelefoneFornecedor = new FrmTelefoneFornecedor();
+            frmTelefoneFornecedor.ShowDialog();
+        }
+
+        private void cadastrarTipoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTipo frmTipo = new FrmTipo();
+            frmTipo.ShowDialog();
+        }
+
+        private void cadastrarMarcaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmMarca frmMarca = new FrmMarca();
+            frmMarca.ShowDialog();  
+        }
+
+        private void cadastroProdutoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmProduto frmProduto = new FrmProduto();
+            frmProduto.ShowDialog();
+        }
+
+        private void cadastrarImagemProdutoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmImagemProduto frmImagemProduto = new FrmImagemProduto();
+            frmImagemProduto.ShowDialog();
+        }
+
+        private void cadastrarSituaçãoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmSituacao frmSituacao = new FrmSituacao();
+            frmSituacao.ShowDialog();
+        }
+
+        private void compraProdutoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmCompraProduto frmCompraProduto = new FrmCompraProduto();
+            frmCompraProduto.ShowDialog();
+        }
+
+        private void vendaProdutoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmVendaProduto frmVendaProduto = new FrmVendaProduto();
+            frmVendaProduto.ShowDialog();
+        }
+
+        private void cadastrarParcelaCompraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmParcelaCompra frmParcelaCompra = new FrmParcelaCompra();
+            frmParcelaCompra.ShowDialog();
+        }
+
+        private void cToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmParcelaVenda frmParcelaVenda = new FrmParcelaVenda();
+            frmParcelaVenda.ShowDialog();
         }
     }
 }
